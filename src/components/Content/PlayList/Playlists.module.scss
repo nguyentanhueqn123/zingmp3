@@ -1,0 +1,108 @@
+@mixin lineClamp($line: 1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+.playlist {
+  margin-top: 40px;
+}
+.header {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.list {
+  width: 100%;
+  padding-left: 0;
+  list-style-type: none;
+  justify-content: space-between;
+  height: 25rem;
+  overflow: hidden;
+
+  .card {
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  .link {
+    text-decoration: none;
+    color: #fff;
+    -webkit-user-select: none;
+  }
+  .link::marker {
+    display: none;
+  }
+
+  .title {
+    @include lineClamp(1);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 8px 0 5px 0;
+    height: 15px;
+    line-height: 2rem;
+  }
+  .description {
+    @include lineClamp(2);
+    color: #827d89;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 14px 0 0 0;
+  }
+}
+
+.container {
+  width: 175px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  // background-image: url("https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/0/a/9/e/0a9e43f3bc9346957f2750d2f1c0fb32.jpg");
+  // background: url("https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/0/a/9/e/0a9e43f3bc9346957f2750d2f1c0fb32.jpg")
+  //   center center / cover no-repeat;
+
+  &:hover .img {
+    transform: scale(1.12, 1.12);
+  }
+  &:hover .itemAction,
+  &:hover .overlay {
+    visibility: visible;
+  }
+  .img {
+    width: 100%;
+    border-radius: 8px;
+    will-change: transform;
+    transition: transform 0.7s;
+    backface-visibility: hidden;
+    transform: perspective(1px) translateZ(0);
+  }
+}
+
+.itemAction {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  visibility: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.itemAction {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

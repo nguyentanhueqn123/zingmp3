@@ -1,0 +1,34 @@
+.sidebarItem {
+  height: 3.8rem;
+
+  .link {
+    line-height: 2rem;
+    padding-left: 28px;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #dadada;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -webkit-tab-highlight-color: transparent;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+  .icon {
+    font-size: 25px;
+  }
+  .data {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.active {
+  background-color: #393243;
+  color: #fff;
+  border-left: 3px solid #774ea1;
+}

@@ -1,0 +1,101 @@
+@use "../App/App.scss";
+
+.aside {
+  width: 24rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #231b2e;
+
+  .logo {
+    width: 100%;
+    height: 6.5rem;
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    overflow: hidden;
+
+    .link {
+      display: block;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .img {
+      width: 100%;
+      height: 30px;
+      line-height: 6.5rem;
+    }
+  }
+
+  .sidebar {
+    flex: 1;
+    overflow: hidden;
+  }
+  .sidebarList {
+    text-decoration: none;
+    padding-left: 0;
+  }
+  .sidebarSubnav {
+    border-top: 1px solid #563776;
+    .container {
+      max-height: 22rem;
+      padding-bottom: 10rem;
+      overscroll-behavior: contain;
+      will-change: scroll-position;
+      overflow: hidden;
+    }
+    .container:hover {
+      overflow: auto;
+    }
+
+    .container::-webkit-scrollbar {
+      width: 4px;
+    }
+    .container::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 20px;
+      background-color: #fafafa;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+.block {
+  width: 100%;
+}
+.vipBlock {
+  width: 170px;
+  margin: 10px 0 10px 20px;
+  background-image: linear-gradient(117deg, #5a4be7, #c86dd7 102%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 15px;
+}
+.vipDes {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+.vipBtn {
+  background-color: #ffdb00;
+  border-color: #ffdb00;
+  color: #333;
+  border-radius: 999px;
+  width: 159px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.titleLibrary {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 700;
+  margin: 30px 0 10px 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

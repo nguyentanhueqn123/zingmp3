@@ -1,0 +1,26 @@
+@use "../App/App.scss";
+
+.content {
+  max-width: calc(100% - 30rem);
+  flex: 1 1;
+  color: #fff;
+
+  overflow-y: auto;
+  overflow-anchor: none !important;
+  will-change: scroll-position;
+  scroll-snap-stop: normal !important;
+  scroll-behavior: unset !important;
+  overscroll-behavior: unset !important;
+}
+.main {
+  padding: 10rem 3rem 15rem 0;
+}
+.content::-webkit-scrollbar {
+  width: 4px;
+}
+.content::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 20px;
+  background-color: #fafafa;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}

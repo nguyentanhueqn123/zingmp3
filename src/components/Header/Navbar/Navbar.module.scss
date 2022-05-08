@@ -1,0 +1,21 @@
+.account {
+  font-size: 20px;
+  background-color: #3e3647;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.8rem;
+  width: 3.8rem;
+  color: #cac9cb;
+
+  + .account {
+    margin-left: 15px;
+  }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}

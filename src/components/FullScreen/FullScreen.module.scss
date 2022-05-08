@@ -1,0 +1,119 @@
+@use "../App/App.scss";
+
+.fullscreenCover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.fullscreen {
+  width: 100%;
+  height: calc(100% - 90px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, #4c3e65, #2a1b42, #120b1c);
+  z-index: 10;
+  overflow: hidden;
+  will-change: top;
+  animation: popUpPlayer 0.3s linear;
+  -webkit-animation: popUpPlayer 0.5s linear;
+}
+@keyframes popUpPlayer {
+  0% {
+    top: calc(100%);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px 20px 20px;
+}
+.left {
+  display: flex;
+  .text {
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 10px 0 10px;
+
+    .header {
+      font-weight: 300;
+      padding: 0;
+      margin-bottom: 5px;
+    }
+    .des {
+      font-weight: 800;
+    }
+  }
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 999px;
+  box-shadow: 0 0 0 3px hsla(0, 0%, 100%, 0.1);
+}
+.tabItem {
+  font-size: 16px;
+  color: #9f98a8;
+  padding: 7px 50px;
+  font-weight: 700;
+}
+.tabItem.active {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 999px;
+  color: #fff;
+}
+.actionGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionIcon {
+  width: 43px;
+  height: 43px;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgCover {
+  width: 330px;
+  height: 330px;
+  color: #fff;
+  text-align: center;
+
+  .img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  .des {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+  }
+}
