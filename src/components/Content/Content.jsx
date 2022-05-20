@@ -1,5 +1,10 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React, {
+  useEffect,
+  forwardRef,
+  useImperativeHandle,
+  useRef,
+} from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import style from "./Content.module.scss";
 import axios from "axios";
@@ -9,14 +14,23 @@ import {
   showPlaylist,
   showTitle,
 } from "../../redux/reducer/khamphaSlice";
+import { showNewSong } from "../../redux/reducer/moiphathanhSlice";
 
-const Content = () => {
+const Content = ({ handleScroll }, ref) => {
   const dispatch = useDispatch();
 
-  // get api khampha
+  const contentRef = useRef();
+  const mainRef = useRef();
+  useImperativeHandle(ref, () => ({
+    showHeader() {
+      return contentRef.current.scrollY || contentRef.current.scrollTop;
+    },
+  }));
+
   useEffect(() => {
+    // get api khampha
     const getPlaylistSong = async () => {
-      const res = await axios
+      await axios
         .get("https://music-player-pink.vercel.app/api/home?page=1")
         .then((res) => {
           const playlists = {
@@ -36,38 +50,10 @@ const Content = () => {
         })
         .catch((err) => console.log(err));
     };
-    getPlaylistSong();
 
-    // const promise = () =>
-    //   Promise.all([getPlaylistSong(), getZingChart()])
-    //     .then(([res1, res2]) => {
-    //       const playlists = {
-    //         playlist1: res1.data.data.items[3].items,
-    //         playlist2: res1.data.data.items[4].items,
-    //         playlist3: res1.data.data.items[5].items,
-    //       };
-    //       const titles = {
-    //         title1: res1.data.data.items[3].title,
-    //         title2: res1.data.data.items[4].title,
-    //         title3: res1.data.data.items[5].title,
-    //       };
-    //       dispatch(showBanner(res1.data.data.items[0].items));
-    //       dispatch(showPlaylist(playlists));
-    //       dispatch(showTitle(titles));
-    //       console.log(res1.data.data);
-
-    //       console.log(res2.data.data);
-    //       dispatch(showTopChart(res2.data.data.RTChart.items));
-    //     })
-    //     .catch((err) => console.log(err));
-
-    // promise();
-  }, []);
-
-  // get api charHome (zingchart)
-  useEffect(() => {
+    // get api charHome (zingchart)
     const getZingChart = async () => {
-      const res = await axios
+      await axios
         .get("https://music-player-pink.vercel.app/api/chart-home")
         .then((res) => {
           console.log(res.data.data);
@@ -75,16 +61,28 @@ const Content = () => {
         })
         .catch((err) => console.log(err));
     };
+
+    // get api nhac moi
+    const getApiNhacMoiPage = async () => {
+      await axios
+        .get("https://music-player-pink.vercel.app/api/home?page=4")
+        .then((res) => {
+          dispatch(showNewSong(res.data.data.items[0].items));
+        })
+        .catch((err) => console.log(err));
+    };
+    getApiNhacMoiPage();
     getZingChart();
+    getPlaylistSong();
   }, []);
 
   return (
-    <div className={style.content}>
-      <div className={style.main}>
+    <div className={style.content} onScroll={handleScroll} ref={contentRef}>
+      <div className={style.main} ref={mainRef}>
         <Outlet />
       </div>
     </div>
   );
 };
 
-export default Content;
+export default forwardRef(Content);

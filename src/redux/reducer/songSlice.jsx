@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const storageSong = JSON.parse(localStorage.getItem("song"));
+const storageLyric = JSON.parse(localStorage.getItem("lyric"));
 export const songReducer = createSlice({
   name: "song",
   initialState: {
@@ -13,7 +14,7 @@ export const songReducer = createSlice({
     loading: false,
     duration: storageSong.duration || 0,
     album: storageSong.album || "",
-    lyric: storageSong.lyric || [],
+    lyric: storageLyric || [],
 
     isRandom: false,
     isRepeat: false,
@@ -46,6 +47,9 @@ export const songReducer = createSlice({
     },
     renderLyrics: (state, action) => {
       state.lyric = action.payload;
+
+      const jsonLyric = JSON.stringify(action.payload);
+      localStorage.setItem("lyric", jsonLyric);
     },
     setRandom: (state, action) => {
       state.isRandom = action.payload;

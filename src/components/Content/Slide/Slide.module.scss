@@ -1,23 +1,25 @@
+@use "../../App/App.scss";
 .slide {
   width: 95%;
   margin: auto;
-
-  .slideItem {
-    .img {
-      width: 90%;
-      margin: auto;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+  margin-top: 5rem;
+}
+.slideItem {
+  .img {
+    width: 90%;
+    margin: auto;
+    border-radius: 8px;
+    cursor: pointer;
   }
 }
 // slider triangle
 .container {
-  margin-top: 20px;
+  margin-top: 6rem;
 }
 .wrapper {
   width: 100%;
   margin-bottom: 50px;
+  margin-top: 4rem;
 }
 .carousel {
   position: relative;
@@ -45,22 +47,9 @@
     width: 100%;
   }
 
-  &:hover .innerLink::after {
-    display: block;
+  &:hover .img {
+    filter: brightness(0.8);
   }
-}
-.innerLink::after {
-  content: "";
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
 }
 .innerLink {
   position: absolute;
@@ -69,11 +58,12 @@
   right: 0;
   left: 0;
   bottom: 0;
+  @include App.userSelect;
 }
 
 .controlPre {
-  color: #333;
-  background-color: #2d2539;
+  color: var(--color-text-third);
+  background-color: var(--color-primary-bg);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -88,10 +78,10 @@
   top: 50%;
   z-index: 5;
   transform: translateY(-50%);
-  opacity: 0.9;
+  opacity: 0.8;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: var(--color-text-primary);
   }
 }
 .activeBtn {
@@ -99,8 +89,8 @@
   background-color: #fafafa !important;
 }
 .controlNext {
-  color: #333;
-  background-color: #2d2539;
+  color: var(--color-text-third);
+  background-color: var(--color-primary-bg);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -115,10 +105,10 @@
   top: 50%;
   z-index: 5;
   transform: translateY(-50%);
-  opacity: 0.9;
+  opacity: 0.8;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: var(--color-text-primary);
   }
 }
 
@@ -227,4 +217,44 @@
   font-weight: 400;
   margin-top: 5px;
   margin-bottom: 0;
+}
+// square
+.containerSquare {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: green;
+  color: #fff;
+  height: 20rem;
+  transform: translate3d(10px, 0, -500px);
+  transition: transform 2s linear;
+  margin-bottom: 10px;
+}
+.slideItem {
+}
+
+// tablet
+@media (min-width: 740px) and (max-width: 1023px) {
+  // triangle
+  .innerItem {
+    width: 108px;
+  }
+}
+// phone
+@media (max-width: 739px) {
+  .cardContent {
+    width: 100px;
+    margin-right: 15px;
+  }
+  .topContent {
+    height: 100px;
+  }
+  .innerItem {
+    width: 70px;
+  }
+  .slide {
+    width: 300%;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+  }
 }

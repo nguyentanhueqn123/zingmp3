@@ -3,13 +3,13 @@ const storageLiveStream = JSON.parse(localStorage.getItem("livestream"));
 export const radioSlice = createSlice({
   name: "radio",
   initialState: {
-    livestream: storageLiveStream || [],
+    liveStream: storageLiveStream || [],
     playlist: {},
   },
   reducers: {
     renderLiveStream: (state, action) => {
-      state.livestream = action.payload;
-      const jsonLiveStream = JSON.stringify(state.livestream);
+      state.liveStream = action.payload;
+      const jsonLiveStream = JSON.stringify(state.liveStream);
       localStorage.setItem("livestream", jsonLiveStream);
     },
     renderPlaylist: (state, action) => {

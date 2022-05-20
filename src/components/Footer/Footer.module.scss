@@ -6,16 +6,16 @@
   justify-content: center;
   padding: 0 20px;
   border-top: 1px solid hsl(0deg 0% 99% / 10%);
-  background-color: #120b1c;
-  color: #fff;
+  background-color: var(--color-footer);
+  color: var(--color-text-primary);
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  min-width: 768px;
   height: 90px;
   cursor: pointer;
+  @include App.userSelect;
 }
 .playerLeft {
   width: 30%;
@@ -32,11 +32,17 @@
   border-radius: 4px;
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include App.userSelect;
 
   .img {
     width: 100%;
   }
   .imgCover {
+    color: #fff;
+    font-size: 18px;
     background-color: rgba(0, 0, 0, 0.3);
     display: none;
     align-items: center;
@@ -46,6 +52,7 @@
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 1;
   }
 
   &:hover .imgCover {
@@ -56,16 +63,27 @@
   margin: 0 10px;
   line-height: 1;
   .title {
-    color: #fff;
+    color: var(--color-text-primary);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0;
     transition: titleMove ease 10s;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
   }
   .des {
-    color: #76717c;
+    // color: #76717c;
+    color: var(--color-text-secondary);
     margin: 5px 0 0 0;
     font-size: 12px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
   }
 }
 @keyframes titleMove {
@@ -83,36 +101,55 @@
   justify-content: space-between;
 }
 .iconSmall {
-  @include App.btnCustom(30px, 14px, #fff, hsla(0, 0%, 100%, 0.1));
+  @include App.btnCustom(
+    30px,
+    14px,
+    var(--color-text-primary),
+    hsla(0, 0%, 100%, 0.1)
+  );
 }
 .iconMedium {
-  @include App.btnCustom(40px, 18px, #fff, hsla(0, 0%, 100%, 0.1));
+  @include App.btnCustom(
+    40px,
+    18px,
+    var(--color-text-primary),
+    hsla(0, 0%, 100%, 0.1)
+  );
 }
 .iconAction {
-  @include App.btnCustom(40px, 35px, #fff, hsla(0, 0%, 100%, 0.1));
+  @include App.btnCustom(
+    40px,
+    28px,
+    var(--color-text-primary),
+    hsla(0, 0%, 100%, 0.1)
+  );
 }
 .playerCenter {
   flex: 1;
+  max-width: 53rem;
 }
 
 .controller {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .iconLoading {
-    @include App.btnCustom(36px, 18px, #fff, none);
-    border: 1px solid #fff;
+}
+.iconLoading {
+  @include App.btnCustom(36px, 18px, var(--color-text-primary), transparent);
+  border: 1px solid var(--color-text-primary);
+  animation: spin-loading 10s linear infinite;
+}
+@keyframes spin-loading {
+  100% {
     transform: rotate(360deg);
-    transition: transform linear 10s;
   }
-  .iconPlay {
-    @include App.btnCustom(36px, 35px, purple, none);
-    border: 1px solid #fff;
+}
+.iconPlay {
+  @include App.btnCustom(36px, 25px, var(--color-text-primary), transparent);
+  border: 1px solid var(--color-text-primary);
 
-    &:hover {
-      border: 1px solid purple;
-    }
+  &:hover {
+    border: 1px solid var(--color-text-primary);
   }
 }
 .progressBlock {
@@ -128,7 +165,7 @@
   margin: 0 5px;
   font-size: 12px;
   text-align: center;
-  color: #fff;
+  color: var(--color-text-secondary);
 }
 
 .progress {
@@ -144,7 +181,7 @@
   -webkit-appearance: none;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
-  -webkit-tap-highlight-color: transparent;
+  @include App.userSelect;
 
   &:hover ~ .progressTrack,
   &:hover ~ .progressTrack .progressTrackUpdate {
@@ -160,7 +197,7 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #fff;
+  background-color: var(--color-track);
   border-radius: 999px;
   width: 0;
   height: 3px;
@@ -175,14 +212,14 @@
   transform: translateY(-50%);
   right: -5px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--color-track);
 }
 
 .progressTrack {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: #ffffff1a;
+  background-color: var(--color-alpha-bg);
   width: calc(100% - 130px);
   border-radius: 999px;
   height: 3px;
@@ -192,82 +229,89 @@
   margin: 0 5px;
   font-size: 12px;
   text-align: center;
-  color: #fff;
-}
-.playerRight {
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.iconMore {
-  @include App.btnCustom(30px, 20px, #fff, hsla(0, 0%, 100%, 0.1));
-}
-.playerVolume {
-  border-right: 2px solid #2a2433;
-  width: 130px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.volumeCover {
-  flex: 1;
-  z-index: 5;
-  height: 18px;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  border-radius: 5px;
-  opacity: 0;
-  will-change: opacity;
-  -webkit-appearance: none;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
-  -webkit-tap-highlight-color: transparent;
-  width: 50%;
-
-  &:hover ~ .volumeBar,
-  &:hover ~ .volumeBar .bar {
-    height: 5px;
-  }
-  &:hover ~ .volumeBar .bar::after {
-    display: block;
-  }
-}
-.volumeBar {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 65px;
-  height: 3px;
-  background-color: #2a2433;
-  border-radius: 999px;
-  .bar {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff;
-    height: 3px;
-    width: 100%;
-
-    &:hover {
-      background-color: green;
-    }
-  }
-  .bar::after {
-    content: "";
-    display: none;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    right: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff;
-    border-radius: 50%;
-  }
+  color: var(--color-text-primary);
 }
 .active {
-  color: purple !important;
+  color: var(--color-action-active) !important;
+}
+.coverFull {
+  display: none;
+}
+// tablet
+@media (min-width: 740px) and (max-width: 1023px) {
+  .playerVolume {
+    position: relative;
+  }
+  .volumeCover,
+  .volumeBar {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+  }
+  .bar::after {
+    display: block;
+  }
+  .playerVolume {
+    width: auto;
+  }
+  .iconSmall {
+    display: none;
+  }
+}
+// phone
+@media (max-width: 739px) {
+  .playerControl {
+    bottom: var(--height-sidebar-mobile);
+    padding: 0 8px;
+    width: 100%;
+    height: calc(var(--height-sidebar-mobile) + 1rem);
+    justify-content: space-around;
+  }
+  .playerCenter {
+    flex: initial;
+  }
+  .playerLeft {
+    width: auto;
+    position: relative;
+  }
+  .mediaLeft {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .playerRight,
+  .iconMedium,
+  .iconSmall,
+  .imgCover {
+    display: none;
+  }
+  .iconPlay,
+  .iconLoading {
+    border: none;
+    &:hover {
+      border: none;
+    }
+  }
+  .coverFull {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include App.userSelect;
+  }
+  .trackTime,
+  .duration {
+    margin: 0;
+  }
+  .progress {
+    width: 100%;
+  }
 }

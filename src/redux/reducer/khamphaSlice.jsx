@@ -2,16 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 export const homeReducer = createSlice({
   name: "home",
   initialState: {
-    banner: {},
+    banner: [],
     titles: {
       title1: "",
       title2: "",
       title3: "",
     },
     playlists: {
-      playlist1: {},
-      playlist2: {},
-      playlist3: {},
+      playlist1: [],
+      playlist2: [],
+      playlist3: [],
     },
   },
   reducers: {

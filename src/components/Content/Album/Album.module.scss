@@ -1,0 +1,142 @@
+.cover {
+  width: 100%;
+  margin-top: 10rem;
+}
+.sectionLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgCover {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &:hover .sectionImg {
+    transform: scale(1.12, 1.12);
+  }
+  &:hover .alphaBackground {
+    display: flex;
+  }
+}
+.sectionImg {
+  width: 100%;
+  border-radius: 8px;
+  will-change: transform;
+  transition: transform 0.7s;
+}
+.alphaBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.alphaIcon {
+  font-size: 35px;
+  width: 45px;
+  height: 45px;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionTitle {
+  color: var(--color-text-primary);
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.sectionDes {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  text-align: center;
+  font-weight: 300;
+}
+.sectionBtn {
+  background-color: var(--color-action-active);
+  border-radius: 999px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid var(--color-action-active);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btnIcon {
+  color: var(--color-text-primary);
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+}
+.btnDes {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-left: 3px;
+}
+.mediaHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 25px;
+  text-transform: uppercase;
+}
+.mediaLeft {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+}
+.mediaRight {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+}
+.mediaTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  padding: 15px 0;
+}
+
+// tablet
+@media (min-width: 740px) and (max-width: 1023px) {
+  .center {
+    margin: auto;
+  }
+}
+// phone
+@media (max-width: 739px) {
+  .cover {
+    margin-top: 1rem;
+  }
+  .center {
+    margin: auto;
+  }
+  .sectionBtn {
+    display: none;
+  }
+  .mediaTitle {
+    padding: 10px 0 10px 2rem;
+    font-size: 18px;
+  }
+}

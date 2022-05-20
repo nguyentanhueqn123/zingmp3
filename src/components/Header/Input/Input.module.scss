@@ -1,0 +1,221 @@
+@use "../../App/App.scss";
+.form {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.label {
+  position: relative;
+  height: 100%;
+
+  ::-webkit-input-placeholder {
+    opacity: 0.8;
+    color: #fff;
+  }
+}
+.iconSearch {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(0, -35%);
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+  font-size: 20px;
+}
+.input {
+  width: 500px;
+  height: 100%;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  background-color: var(--color-alpha-bg);
+  color: var(--color-text-primary);
+  padding-left: 45px;
+  font-size: 14px;
+
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--color-text-secondary);
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--color-text-secondary);
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--color-text-secondary);
+  }
+  &:focus {
+    background-color: var(--color-primary-bg);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left: 2px solid var(--color-border);
+    border-right: 2px solid var(--color-border);
+    border-top: 2px solid var(--color-border);
+  }
+  &:focus ~ .history {
+    display: block;
+  }
+}
+.history {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary-bg);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  list-style-type: none;
+  padding-left: 0;
+  display: none;
+  border-left: 2px solid var(--color-border);
+  border-right: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+  box-shadow: 1px 4px 2px var(--color-border);
+}
+
+.historyMain {
+  padding: 25px 10px 0 10px;
+  color: #fff;
+  max-height: 240px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  &:hover {
+    overflow: auto;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 20px;
+    background-color: #fafafa;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+}
+.historyTitle {
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 10px 8px 10px;
+}
+.historyItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+
+  &:hover {
+    background-color: var(--color-alpha-bg);
+  }
+}
+.historyIcon {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  padding-right: 10px;
+}
+.historyText {
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 400;
+}
+// when no song look up
+.suggestionNull {
+  padding-top: 20px;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+.suggestItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+
+  &:hover {
+    background-color: var(--color-alpha-bg);
+  }
+}
+.suggestLeft {
+  width: 40px;
+  overflow: hidden;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.suggestImg {
+  width: 100%;
+  height: 100%;
+}
+.suggestRight {
+  flex: 1;
+}
+.suggestTitle {
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+.suggestArtist {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.linkItem {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  @include App.userSelect;
+}
+.iconBack {
+  display: none;
+}
+// tablet
+@media (min-width: 740px) and (max-width: 1023px) {
+  .input {
+    width: 350px;
+  }
+}
+// phone
+@media (max-width: 739px) {
+  .input {
+    width: 260px;
+    font-size: 12px;
+  }
+  .history {
+    position: fixed;
+    top: 5rem;
+    bottom: calc(var(--height-sidebar-mobile) * 2);
+    z-index: 11;
+  }
+  .historyMain {
+    max-height: initial;
+  }
+  .input:focus ~ .iconBack {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-primary);
+    z-index: 12;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -5,6 +5,8 @@ import songSlice from "./reducer/songSlice";
 import homeSlice from "./reducer/homeSlice";
 import radioSlice from "./reducer/radioSlice";
 import moiphathanhSlice from "./reducer/moiphathanhSlice";
+import mvSlice from "./reducer/mvSlice";
+import theoDoiSlice from "./reducer/theoDoiSlice";
 
 export const store = configureStore({
   reducer: {
@@ -14,5 +16,7 @@ export const store = configureStore({
     home: homeSlice,
     radio: radioSlice,
     moiphathanh: moiphathanhSlice,
+    mv: mvSlice,
+    theodoi: theoDoiSlice,
   },
 });

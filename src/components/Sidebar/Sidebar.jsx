@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { RiAlbumLine } from "react-icons/ri";
-import { MdOutlineLibraryMusic, MdOutlineVideoLibrary } from "react-icons/md";
+import { MdOutlineLibraryMusic } from "react-icons/md";
 import { BsBarChartLine } from "react-icons/bs";
 import { BiNews } from "react-icons/bi";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiOutlineStar, AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import { GiMusicSpell } from "react-icons/gi";
 import { CgMusic } from "react-icons/cg";
 import { HiOutlineViewGrid } from "react-icons/hi";
 import clsx from "clsx";
 import style from "./Sidebar.module.scss";
+import { useDispatch, useSelector } from "react-redux";
 import SidebarItem from "./SidebarItem/SidebarItem";
+import { setSeeMore, setToast } from "../../redux/reducer/homeSlice";
 
 const Sidebar = () => {
   const sidebarItems = [
@@ -80,13 +82,35 @@ const Sidebar = () => {
       link: "/ganday",
     },
   ];
+  const dispatch = useDispatch();
+  const seeMore = useSelector((state) => state.home.seeMore);
+
+  const handleSeeMore = () => {
+    dispatch(setSeeMore(false));
+  };
+  const handleSeeLess = () => {
+    dispatch(setSeeMore(true));
+  };
+
   return (
-    <aside className={style.aside}>
-      <div className={style.logo}>
-        <a href="#" className={style.link}>
+    <aside className={clsx(style.aside, { [style.asideMove]: seeMore })}>
+      <div className={clsx(style.logo, { [style.logoMove]: seeMore })}>
+        <a href="/" className={clsx(style.link, { [style.linkMove]: seeMore })}>
           <img
             src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg"
             alt="logo-zing.svg"
+            className={style.img}
+          />
+        </a>
+        <a
+          href="/"
+          className={clsx(style.linkTablet, {
+            [style.linkTabletMove]: seeMore,
+          })}
+        >
+          <img
+            src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.6.25/static/media/icon_zing_mp3_60.f6b51045.svg"
+            alt=""
             className={style.img}
           />
         </a>
@@ -106,7 +130,7 @@ const Sidebar = () => {
       </div>
 
       <div className={style.sidebarSubnav}>
-        <div className={style.container}>
+        <div className={clsx(style.container)}>
           <ul className={clsx([style.sidebarList])}>
             {sidebarSubnav.map((sidebarItem) => (
               <SidebarItem
@@ -116,20 +140,23 @@ const Sidebar = () => {
                 link={sidebarItem.link}
               />
             ))}
-            {/* <SidebarItem icon={<CgMusic />} data="Nhạc mới" link="/mymusic" />
-            <SidebarItem icon={<CgMusic />} data="Nhạc mới" link="/mymusic" />
-            <SidebarItem icon={<CgMusic />} data="Nhạc mới" link="/mymusic" />
-            <SidebarItem icon={<CgMusic />} data="Nhạc mới" link="/mymusic" /> */}
           </ul>
-          <div className={style.block}>
+
+          <div className={clsx(style.block)}>
             <div className={style.vipBlock}>
               <p className={style.vipDes}>
                 Nghe nhạc không quảng cáo cùng kho nhạc VIP
               </p>
-              <button className={style.vipBtn}>NÂNG CẤP VIP</button>
+              <button
+                className={style.vipBtn}
+                onClick={() => dispatch(setToast(true))}
+              >
+                NÂNG CẤP VIP
+              </button>
             </div>
           </div>
-          <div className={style.titleLibrary}>Thư viện</div>
+
+          <div className={clsx(style.titleLibrary)}>Thư viện</div>
           <ul className={clsx([style.sidebarList])}>
             {sidebarMore.map((sidebarItem) => (
               <SidebarItem
@@ -142,6 +169,16 @@ const Sidebar = () => {
           </ul>
         </div>
       </div>
+
+      {seeMore ? (
+        <div className={style.iconSeeMore} onClick={handleSeeMore}>
+          <AiOutlineRight />
+        </div>
+      ) : (
+        <div className={style.iconSeeLess} onClick={handleSeeLess}>
+          <AiOutlineLeft />
+        </div>
+      )}
     </aside>
   );
 };

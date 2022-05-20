@@ -7,22 +7,35 @@ import { setActive } from "../../../redux/reducer/homeSlice";
 
 const SidebarItem = ({ index, icon, img, data, link }) => {
   const active = useSelector((state) => state.home.active);
+  const seeMore = useSelector((state) => state.home.seeMore);
   const dispatch = useDispatch();
 
   return (
     <li
-      // className={`${style.sidebarItem} ${index === active && style.active}`}
-      className={clsx(style.sidebarItem, { [style.active]: active === data })}
+      className={clsx(style.sidebarItem, { [style.sidebarItemMove]: seeMore })}
       onClick={() => dispatch(setActive(data))}
     >
-      <Link to={link} className={style.link}>
-        {icon && <span className={style.icon}>{icon}</span>}
+      <Link
+        to={link}
+        className={clsx(style.link, {
+          [style.active]: active === data,
+          [style.activeMove]: seeMore,
+          [style.linkMove]: seeMore,
+        })}
+      >
+        {icon && (
+          <span className={clsx(style.icon, { [style.iconMove]: seeMore })}>
+            {icon}
+          </span>
+        )}
         {img && (
           <div className={style.imgCover}>
             <img src={img} alt="img icon" className={style.img} />
           </div>
         )}
-        <span className={style.data}>{data}</span>
+        <span className={clsx(style.data, { [style.dataMove]: seeMore })}>
+          {data}
+        </span>
       </Link>
     </li>
   );

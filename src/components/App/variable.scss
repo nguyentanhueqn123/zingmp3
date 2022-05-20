@@ -1,0 +1,1003 @@
+$color-white: #fff;
+$color-dark: #333;
+
+$height-header: 6.5rem;
+$height-footer: 9rem;
+$width-sidebar: 24rem;
+$width-sidebar-tablet: 7rem;
+$height-sidebar-mobile: 5rem;
+
+$xone-layout: #1e1e1e;
+$xone-sidebar: hsla(0, 0%, 100%, 0.05);
+$xone-footer: #181818;
+$xone-text-primary: #fff;
+$xone-text-secondary: #a0a0a0;
+$xone-text-btn: #ffffff;
+$xone-item-hover: hsla(0, 0%, 100%, 0.1);
+$xone-action: #ffffff;
+$xone-action-active: #d7cb1f;
+$xone-primary-bg: #282828;
+$xone-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$xone-icon: #c1c1c1;
+$xone-player: #5d5d5d;
+$xone-border: hsla(0, 0%, 100%, 0.05);
+$xone-track: #d7cb1f;
+$xone-text-hover: #fff;
+
+$london-layout: #082050;
+$london-sidebar: hsla(0, 0%, 100%, 0.05);
+$london-footer: #061840;
+$london-text-primary: #fff;
+$london-text-secondary: #dadada;
+$london-text-btn: #ffffff;
+$london-item-hover: #363e5e;
+$london-action: #ffffff;
+$london-action-active: #3c71f5;
+$london-primary-bg: #192f60;
+$london-alpha-bg: #505d79;
+$london-icon: #d8d8d8;
+$london-player: #5d5d5d;
+$london-border: hsla(0, 0%, 100%, 0.1);
+$london-track: #ffffff;
+$london-text-hover: #fff;
+
+$zing-layout: #3a295d;
+$zing-sidebar: hsla(0, 0%, 100%, 0.05);
+$zing-footer: #32214e;
+$zing-text-primary: #fff;
+$zing-text-secondary: #dadada;
+$zing-text-btn: #ffffff;
+$zing-item-hover: #564175;
+$zing-action: #ffffff;
+$zing-action-active: #ef5c91;
+$zing-primary-bg: #6e53af;
+$zing-alpha-bg: #795f8d;
+$zing-icon: #d2d0d3;
+$zing-player: #5d5d5d;
+$zing-border: #564175;
+$zing-track: #ffffff;
+$zing-text-hover: #fff;
+
+$elffel-layout: #282828;
+$elffel-sidebar: hsla(0, 0%, 100%, 0.05);
+$elffel-footer: #202020;
+$elffel-text-primary: #fff;
+$elffel-text-secondary: #a0a0a0;
+$elffel-text-btn: #ffffff;
+$elffel-item-hover: #505050;
+$elffel-action: #ffffff;
+$elffel-action-active: #774ea1;
+$elffel-primary-bg: #3d3d3d;
+$elffel-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$elffel-icon: #d1d1d1;
+$elffel-player: #5d5d5d;
+$elffel-border: hsla(0, 0%, 100%, 0.05);
+$elffel-track: #ffffff;
+$elffel-text-hover: #fff;
+
+$jack-layout: #767269;
+$jack-sidebar: hsla(0, 0%, 100%, 0.05);
+$jack-footer: #5e5b54;
+$jack-text-primary: #fff;
+$jack-text-secondary: #dadada;
+$jack-text-btn: #ffffff;
+$jack-item-hover: hsla(0, 0%, 100%, 0.1);
+$jack-action: #ffffff;
+$jack-action-active: #ac8e77;
+$jack-primary-bg: #565147;
+$jack-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$jack-icon: #d4d4d3;
+$jack-player: #8e8c87;
+$jack-border: hsla(0, 0%, 100%, 0.05);
+$jack-track: #ffffff;
+$jack-text-hover: #fff;
+
+$iu-layout: #e7dfdd;
+$iu-sidebar: hsla(0, 0%, 100%, 0.05);
+$iu-footer: #d0ccc5;
+$iu-text-primary: #32323d;
+$iu-text-secondary: #798283;
+$iu-text-btn: #ffffff;
+$iu-item-hover: rgba(0, 0, 0, 0.05);
+$iu-action: #ffffff;
+$iu-action-active: #409abc;
+$iu-primary-bg: #ffff;
+$iu-alpha-bg: rgba(0, 0, 0, 0.05);
+$iu-icon: #5b6066;
+$iu-player: #5d5d5d;
+$iu-border: #dbd6d3;
+$iu-track: #409abc;
+$iu-text-hover: #409abc;
+
+$jiChangWook-layout: #b2d8db;
+$jiChangWook-sidebar: hsla(0, 0%, 100%, 0.3);
+$jiChangWook-footer: #b4d0d0;
+$jiChangWook-text-primary: #333;
+$jiChangWook-text-secondary: #798283;
+$jiChangWook-text-btn: #ffffff;
+$jiChangWook-item-hover: hsla(0, 0%, 100%, 0.3);
+$jiChangWook-action: #333;
+$jiChangWook-action-active: #389292;
+$jiChangWook-primary-bg: #e1e8e8;
+$jiChangWook-alpha-bg: hsla(0, 0%, 100%, 0.3);
+$jiChangWook-icon: #4f575e;
+$jiChangWook-player: #a2bbbb;
+$jiChangWook-border: #a9cdd0;
+$jiChangWook-track: #389292;
+$jiChangWook-text-hover: #389292;
+
+$lisa-layout: #f9dbdb;
+$lisa-sidebar: hsla(0, 0%, 100%, 0.05);
+$lisa-footer: #f8c6c5;
+$lisa-text-primary: #333;
+$lisa-text-secondary: #696969;
+$lisa-text-btn: #ffffff;
+$lisa-item-hover: rgba(0, 0, 0, 0.05);
+$lisa-action: #ffffff;
+$lisa-action-active: #ea7aa0;
+$lisa-primary-bg: #fef8f8;
+$lisa-alpha-bg: rgba(0, 0, 0, 0.05);
+$lisa-icon: #495057;
+$lisa-player: #5d5d5d;
+$lisa-border: #d9c6c2;
+$lisa-track: #ea7aa0;
+$lisa-text-hover: #ea7aa0;
+
+$jennieKim-layout: #bab8c3;
+$jennieKim-sidebar: rgba(0, 0, 0, 0.05);
+$jennieKim-footer: #c6c4d1;
+$jennieKim-text-primary: #333;
+$jennieKim-text-secondary: #696969;
+$jennieKim-text-btn: #ffffff;
+$jennieKim-item-hover: rgba(0, 0, 0, 0.05);
+$jennieKim-action: #333;
+$jennieKim-action-active: #346875;
+$jennieKim-primary-bg: #e2e7f5;
+$jennieKim-alpha-bg: #b1afb9;
+$jennieKim-icon: #495057;
+$jennieKim-player: #5d5d5d;
+$jennieKim-border: hsla(0, 0%, 100%, 0.05);
+$jennieKim-track: #346875;
+$jennieKim-text-hover: #346875;
+
+$jisoo-layout: #fff;
+$jisoo-sidebar: rgba(0, 0, 0, 0.05);
+$jisoo-footer: #fff;
+$jisoo-text-primary: #333;
+$jisoo-text-secondary: rgba(0, 0, 0, 0.6);
+$jisoo-text-btn: #ffffff;
+$jisoo-item-hover: rgba(0, 0, 0, 0.05);
+$jisoo-action: #ffffff;
+$jisoo-action-active: #774ea1;
+$jisoo-primary-bg: #fff;
+$jisoo-alpha-bg: #f2f2f2;
+$jisoo-icon: #d1d1d1;
+$jisoo-player: #5d5d5d;
+$jisoo-border: #f2f2f2;
+$jisoo-track: #6d3f83;
+$jisoo-text-hover: #6d3f83;
+
+$rose-layout: #082050;
+$rose-sidebar: hsla(0, 0%, 100%, 0.05);
+$rose-footer: #061840;
+$rose-text-primary: #fff;
+$rose-text-secondary: hsla(0, 0%, 100%, 0.5);
+$rose-text-btn: #ffffff;
+$rose-item-hover: hsla(0, 0%, 100%, 0.1);
+$rose-action: #ffffff;
+$rose-action-active: #3c71f5;
+$rose-primary-bg: #192f60;
+$rose-alpha-bg: hsla(0, 0%, 100%, 0.05);
+$rose-icon: #d8d8d8;
+$rose-player: #505d7a;
+$rose-border: hsla(0, 0%, 100%, 0.05);
+$rose-track: #ffffff;
+$rose-text-hover: #fff;
+
+// idol jav
+$rola-layout: hsla(0, 0%, 100%, 0.8);
+$rola-sidebar: rgba(0, 0, 0, 0.05);
+$rola-footer: hsla(0, 0%, 100%, 0.8);
+$rola-text-primary: #32323d;
+$rola-text-secondary: #798283;
+$rola-text-btn: #ffffff;
+$rola-item-hover: rgba(0, 0, 0, 0.05);
+$rola-action: #ffffff;
+$rola-action-active: #409abc;
+$rola-primary-bg: #ffff;
+$rola-alpha-bg: rgba(0, 0, 0, 0.05);
+$rola-icon: #5b6066;
+$rola-player: #5d5d5d;
+$rola-border: #dbd6d3;
+$rola-track: #409abc;
+$rola-text-hover: #409abc;
+
+$christmas-layout: hsla(0, 0%, 100%, 0.8);
+$christmas-sidebar: hsla(0, 0%, 100%, 0.3);
+$christmas-footer: hsla(0, 0%, 100%, 0.8);
+$christmas-text-primary: #333;
+$christmas-text-secondary: #798283;
+$christmas-text-btn: #ffffff;
+$christmas-item-hover: hsla(0, 0%, 100%, 0.3);
+$christmas-action: #333;
+$christmas-action-active: #389292;
+$christmas-primary-bg: #e1e8e8;
+$christmas-alpha-bg: hsla(0, 0%, 100%, 0.3);
+$christmas-icon: #4f575e;
+$christmas-player: #a2bbbb;
+$christmas-border: #a9cdd0;
+$christmas-track: #389292;
+$christmas-text-hover: #389292;
+
+$conan-layout: hsla(0, 0%, 100%, 0.6);
+$conan-sidebar: hsla(0, 0%, 100%, 0.05);
+$conan-footer: hsla(0, 0%, 100%, 0.4);
+$conan-text-primary: #333;
+$conan-text-secondary: #696969;
+$conan-text-btn: #ffffff;
+$conan-item-hover: rgba(0, 0, 0, 0.05);
+$conan-action: #ffffff;
+$conan-action-active: #ea7aa0;
+$conan-primary-bg: #fef8f8;
+$conan-alpha-bg: rgba(0, 0, 0, 0.05);
+$conan-icon: #495057;
+$conan-player: #5d5d5d;
+$conan-border: #d9c6c2;
+$conan-track: #ea7aa0;
+$conan-text-hover: #ea7aa0;
+
+$fukada-layout: hsla(0, 0%, 100%, 0.6);
+$fukada-sidebar: hsla(0, 0%, 100%, 0.3);
+$fukada-footer: hsla(0, 0%, 100%, 0.5);
+$fukada-text-primary: #333;
+$fukada-text-secondary: #798283;
+$fukada-text-btn: #ffffff;
+$fukada-item-hover: hsla(0, 0%, 100%, 0.3);
+$fukada-action: #333;
+$fukada-action-active: #389292;
+$fukada-primary-bg: #e1e8e8;
+$fukada-alpha-bg: hsla(0, 0%, 100%, 0.3);
+$fukada-icon: #4f575e;
+$fukada-player: #a2bbbb;
+$fukada-border: #a9cdd0;
+$fukada-track: #389292;
+$fukada-text-hover: #389292;
+
+$dark-layout: #1e1e1e;
+$dark-sidebar: #292929;
+$dark-footer: #181818;
+$dark-text-primary: #fff;
+$dark-text-secondary: #a0a0a0;
+$dark-text-btn: #fff;
+$dark-item-hover: #404040;
+$dark-action: #ffffff;
+$dark-action-active: #774ea1;
+$dark-primary-bg: #282828;
+$dark-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$dark-icon: #c1c1c1;
+$dark-player: #5d5d5d;
+$dark-border: hsla(0, 0%, 100%, 0.05);
+$dark-track: #fff;
+$dark-text-hover: #fff;
+
+$purple-layout: #170f23;
+$purple-sidebar: #231b2e;
+$purple-footer: #120c1c;
+$purple-text-primary: #fff;
+$purple-text-secondary: #dadada;
+$purple-text-btn: #fff;
+$purple-text-hover: #fff;
+$purple-item-hover: #393243;
+$purple-action: #ffffff;
+$purple-action-active: #774ea1;
+$purple-primary-bg: #453575;
+$purple-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$purple-icon: #b7b6ba;
+$purple-player: #595560;
+$purple-border: hsla(0, 0%, 100%, 0.05);
+$purple-track: #fff;
+$purple-text-hover: #fff;
+
+$blue-bold-layout: #101f3f;
+$blue-bold-sidebar: #1c2a49;
+$blue-bold-footer: #0d1932;
+$blue-bold-text-primary: #fff;
+$blue-bold-text-secondary: #fff;
+$blue-bold-text-btn: #fff;
+$blue-bold-item-hover: #33405c;
+$blue-bold-action: #ffffff;
+$blue-bold-action-active: #3c71f5;
+$blue-bold-primary-bg: #192f60;
+$blue-bold-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$blue-bold-icon: #c1c1c1;
+$blue-bold-player: #565e70;
+$blue-bold-border: hsla(0, 0%, 100%, 0.05);
+$blue-bold-track: #fff;
+$blue-bold-text-hover: #fff;
+
+$blue-layout: #1d375a;
+$blue-sidebar: #294162;
+$blue-footer: #172c48;
+$blue-text-primary: #fff;
+$blue-text-secondary: #dadada;
+$blue-text-btn: #fff;
+$blue-item-hover: #3f5472;
+$blue-action: #fff;
+$blue-action-active: #3c71f5;
+$blue-primary-bg: #284a78;
+$blue-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$blue-icon: #d0d1d3;
+$blue-player: #5d6b7f;
+$blue-border: hsla(0, 0%, 100%, 0.05);
+$blue-track: #fff;
+$blue-text-hover: #fff;
+
+$green-layout: #1b4534;
+$green-sidebar: #234e3e;
+$green-footer: #14372a;
+$green-text-primary: #fff;
+$green-text-secondary: #d8d9d8;
+$green-text-btn: #fff;
+$green-item-hover: #366052;
+$green-action: #ffffff;
+$green-action-active: #3f9785;
+$green-primary-bg: #2f6e55;
+$green-alpha-bg: #2c5749;
+$green-icon: #cfd2d1;
+$green-player: #57736a;
+$green-border: hsla(0, 0%, 100%, 0.05);
+$green-track: #fff;
+$green-text-hover: #fff;
+
+$brown-layout: #57403b;
+$brown-sidebar: #5f4a45;
+$brown-footer: #46332f;
+$brown-text-primary: #fff;
+$brown-text-secondary: #dadada;
+$brown-text-btn: #fff;
+$brown-item-hover: #715d58;
+$brown-action: #ffffff;
+$brown-action-active: #986d5c;
+$brown-primary-bg: #6f514c;
+$brown-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$brown-icon: #c7c4c3;
+$brown-player: #7e716e;
+$brown-border: hsla(0, 0%, 100%, 0.05);
+$brown-track: #fff;
+$brown-text-hover: #fff;
+
+$pink-layout: #833664;
+$pink-sidebar: #883c6c;
+$pink-footer: #682a50;
+$pink-text-primary: #fff;
+$pink-text-secondary: #dad8d9;
+$pink-text-btn: #fff;
+$pink-item-hover: #934a7a;
+$pink-action: #ffffff;
+$pink-action-active: #db63b0;
+$pink-primary-bg: #a44987;
+$pink-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$pink-icon: #d1cbd0;
+$pink-player: #944d84;
+$pink-border: hsla(0, 0%, 100%, 0.05);
+$pink-track: #fff;
+$pink-text-hover: #fff;
+
+$red-layout: #731e17;
+$red-sidebar: #7a2520;
+$red-footer: #5c1612;
+$red-text-primary: #fff;
+$red-text-secondary: #dadada;
+$red-text-btn: #fff;
+$red-item-hover: #873634;
+$red-action: #ffffff;
+$red-action-active: #aa3020;
+$red-primary-bg: #883236;
+$red-alpha-bg: hsla(0, 0%, 100%, 0.1);
+$red-icon: #d6d4d4;
+$red-player: #8d5a5a;
+$red-border: hsla(0, 0%, 100%, 0.05);
+$red-track: #fff;
+$red-text-hover: #fff;
+
+// light color
+$light-layout: #ffffff;
+$light-sidebar: #f2f2f2;
+$light-footer: #fff;
+$light-text-primary: #333;
+$light-text-secondary: #32323d;
+$light-text-btn: #fff;
+$light-item-hover: #cfcfcf;
+$light-action: #32323d;
+$light-action-active: #6d3f83;
+$light-primary-bg: #fff;
+$light-alpha-bg: rgba(0, 0, 0, 0.05);
+$light-icon: #8e9297;
+$light-player: #e5e5e5;
+$light-border: #f2f2f2;
+$light-track: #6d3f83;
+$light-text-hover: #6d3f83;
+
+$gray-light-layout: #e5e3df;
+$gray-light-sidebar: #d9d7d4;
+$gray-light-footer: #d0ccc5;
+$gray-light-text-primary: #333;
+$gray-light-text-secondary: #32323d;
+$gray-light-text-btn: #fff;
+$gray-light-item-hover: #cfcdc9;
+$gray-light-action: #32323d;
+$gray-light-action-active: #8c8471;
+$gray-light-primary-bg: #fffffe;
+$gray-light-alpha-bg: rgba(0, 0, 0, 0.05);
+$gray-light-icon: #4c525a;
+$gray-light-player: #bbb8b1;
+$gray-light-border: hsla(0, 0%, 100%, 0.05);
+$gray-light-track: #8c8471;
+$gray-light-text-hover: #8c8471;
+
+$blue-light-layout: #ced9d9;
+$blue-light-sidebar: #dce4e4;
+$blue-light-footer: #b4d0d0;
+$blue-light-text-primary: #333;
+$blue-light-text-secondary: #656870;
+$blue-light-text-btn: #fff;
+$blue-light-item-hover: #e7eded;
+$blue-light-action: #32323d;
+$blue-light-action-active: #389292;
+$blue-light-primary-bg: #e1e8e8;
+$blue-light-alpha-bg: rgba(0, 0, 0, 0.05);
+$blue-light-icon: #4f575e;
+$blue-light-player: #a2bbbb;
+$blue-light-border: hsla(0, 0%, 100%, 0.05);
+$blue-light-track: #fff;
+$blue-light-text-hover: #389292;
+
+$pink-light-layout: #f9dbdb;
+$pink-light-sidebar: #f9dcdc;
+$pink-light-footer: #f8c6c5;
+$pink-light-text-primary: #333;
+$pink-light-text-secondary: #323242;
+$pink-light-text-btn: #fff;
+$pink-light-item-hover: #ecd1d1;
+$pink-light-action: #32323d;
+$pink-light-action-active: #ea7aa0;
+$pink-light-primary-bg: #fef8f8;
+$pink-light-alpha-bg: rgba(0, 0, 0, 0.05);
+$pink-light-icon: #50565c;
+$pink-light-player: #e0b2b1;
+$pink-light-border: #edd0d0;
+$pink-light-track: #ea7aa0;
+$pink-light-text-hover: #ea7aa0;
+
+:root {
+  --color-layout: #{$purple-layout};
+  --color-sidebar: #{$purple-sidebar};
+  --color-footer: #{$purple-footer};
+
+  --color-text-primary: #{$purple-text-primary};
+  --color-text-secondary: #{$purple-text-secondary};
+  --color-text-btn: #{$purple-text-btn};
+  --color-item-hover: #{$purple-item-hover};
+  --color-action: #{$purple-action};
+  --color-action-active: #{$purple-action-active};
+  --color-primary-bg: #{$purple-primary-bg};
+  --color-alpha-bg: #{$purple-alpha-bg};
+  --color-icon: #{$purple-icon};
+  --color-player: #{$purple-player};
+  --color-border: #{$purple-border};
+  --color-track: #{$purple-track};
+  --color-text-hover: #{$purple-text-hover};
+
+  --height-header: #{$height-header};
+  --height-footer: #{$height-footer};
+  --width-sidebar: #{$width-sidebar};
+  --width-sidebar-tablet: #{$width-sidebar-tablet};
+  --height-sidebar-mobile: #{$height-sidebar-mobile};
+}
+
+.xone {
+  --color-layout: #{$xone-layout};
+  --color-sidebar: #{$xone-sidebar};
+  --color-footer: #{$xone-footer};
+
+  --color-text-primary: #{$xone-text-primary};
+  --color-text-secondary: #{$xone-text-secondary};
+  --color-text-btn: #{$xone-text-btn};
+  --color-item-hover: #{$xone-item-hover};
+  --color-action: #{$xone-action};
+  --color-action-active: #{$xone-action-active};
+  --color-primary-bg: #{$xone-primary-bg};
+  --color-alpha-bg: #{$xone-alpha-bg};
+  --color-icon: #{$xone-icon};
+  --color-player: #{$xone-player};
+  --color-border: #{$xone-border};
+  --color-track: #{$xone-track};
+  --color-text-hover: #{$xone-text-hover};
+}
+.london {
+  --color-layout: #{$london-layout};
+  --color-sidebar: #{$london-sidebar};
+  --color-footer: #{$london-footer};
+
+  --color-text-primary: #{$london-text-primary};
+  --color-text-secondary: #{$london-text-secondary};
+  --color-text-btn: #{$london-text-btn};
+  --color-item-hover: #{$london-item-hover};
+  --color-action: #{$london-action};
+  --color-action-active: #{$london-action-active};
+  --color-primary-bg: #{$london-primary-bg};
+  --color-alpha-bg: #{$london-alpha-bg};
+  --color-icon: #{$london-icon};
+  --color-player: #{$london-player};
+  --color-border: #{$london-border};
+  --color-track: #{$london-track};
+  --color-text-hover: #{$london-text-hover};
+}
+.zing {
+  --color-layout: #{$zing-layout};
+  --color-sidebar: #{$zing-sidebar};
+  --color-footer: #{$zing-footer};
+
+  --color-text-primary: #{$zing-text-primary};
+  --color-text-secondary: #{$zing-text-secondary};
+  --color-text-btn: #{$zing-text-btn};
+  --color-item-hover: #{$zing-item-hover};
+  --color-action: #{$zing-action};
+  --color-action-active: #{$zing-action-active};
+  --color-primary-bg: #{$zing-primary-bg};
+  --color-alpha-bg: #{$zing-alpha-bg};
+  --color-icon: #{$zing-icon};
+  --color-player: #{$zing-player};
+  --color-border: #{$zing-border};
+  --color-track: #{$zing-track};
+  --color-text-hover: #{$zing-text-hover};
+}
+.elffel {
+  --color-layout: #{$elffel-layout};
+  --color-sidebar: #{$elffel-sidebar};
+  --color-footer: #{$elffel-footer};
+
+  --color-text-primary: #{$elffel-text-primary};
+  --color-text-secondary: #{$elffel-text-secondary};
+  --color-text-btn: #{$elffel-text-btn};
+  --color-item-hover: #{$elffel-item-hover};
+  --color-action: #{$elffel-action};
+  --color-action-active: #{$elffel-action-active};
+  --color-primary-bg: #{$elffel-primary-bg};
+  --color-alpha-bg: #{$elffel-alpha-bg};
+  --color-icon: #{$elffel-icon};
+  --color-player: #{$elffel-player};
+  --color-border: #{$elffel-border};
+  --color-track: #{$elffel-track};
+  --color-text-hover: #{$elffel-text-hover};
+}
+
+.jack {
+  --color-layout: #{$jack-layout};
+  --color-sidebar: #{$jack-sidebar};
+  --color-footer: #{$jack-footer};
+
+  --color-text-primary: #{$jack-text-primary};
+  --color-text-secondary: #{$jack-text-secondary};
+  --color-text-btn: #{$jack-text-btn};
+  --color-item-hover: #{$jack-item-hover};
+  --color-action: #{$jack-action};
+  --color-action-active: #{$jack-action-active};
+  --color-primary-bg: #{$jack-primary-bg};
+  --color-alpha-bg: #{$jack-alpha-bg};
+  --color-icon: #{$jack-icon};
+  --color-player: #{$jack-player};
+  --color-border: #{$jack-border};
+  --color-track: #{$jack-track};
+  --color-text-hover: #{$jack-text-hover};
+}
+.iu {
+  --color-layout: #{$iu-layout};
+  --color-sidebar: #{$iu-sidebar};
+  --color-footer: #{$iu-footer};
+
+  --color-text-primary: #{$iu-text-primary};
+  --color-text-secondary: #{$iu-text-secondary};
+  --color-text-btn: #{$iu-text-btn};
+  --color-item-hover: #{$iu-item-hover};
+  --color-action: #{$iu-action};
+  --color-action-active: #{$iu-action-active};
+  --color-primary-bg: #{$iu-primary-bg};
+  --color-alpha-bg: #{$iu-alpha-bg};
+  --color-icon: #{$iu-icon};
+  --color-player: #{$iu-player};
+  --color-border: #{$iu-border};
+  --color-track: #{$iu-track};
+  --color-text-hover: #{$iu-text-hover};
+}
+.jiChangWook {
+  --color-layout: #{$jiChangWook-layout};
+  --color-sidebar: #{$jiChangWook-sidebar};
+  --color-footer: #{$jiChangWook-footer};
+
+  --color-text-primary: #{$jiChangWook-text-primary};
+  --color-text-secondary: #{$jiChangWook-text-secondary};
+  --color-text-btn: #{$jiChangWook-text-btn};
+  --color-item-hover: #{$jiChangWook-item-hover};
+  --color-action: #{$jiChangWook-action};
+  --color-action-active: #{$jiChangWook-action-active};
+  --color-primary-bg: #{$jiChangWook-primary-bg};
+  --color-alpha-bg: #{$jiChangWook-alpha-bg};
+  --color-icon: #{$jiChangWook-icon};
+  --color-player: #{$jiChangWook-player};
+  --color-border: #{$jiChangWook-border};
+  --color-track: #{$jiChangWook-track};
+  --color-text-hover: #{$jiChangWook-text-hover};
+}
+
+.lisa {
+  --color-layout: #{$lisa-layout};
+  --color-sidebar: #{$lisa-sidebar};
+  --color-footer: #{$lisa-footer};
+
+  --color-text-primary: #{$lisa-text-primary};
+  --color-text-secondary: #{$lisa-text-secondary};
+  --color-text-btn: #{$lisa-text-btn};
+  --color-item-hover: #{$lisa-item-hover};
+  --color-action: #{$lisa-action};
+  --color-action-active: #{$lisa-action-active};
+  --color-primary-bg: #{$lisa-primary-bg};
+  --color-alpha-bg: #{$lisa-alpha-bg};
+  --color-icon: #{$lisa-icon};
+  --color-player: #{$lisa-player};
+  --color-border: #{$lisa-border};
+  --color-track: #{$lisa-track};
+  --color-text-hover: #{$lisa-text-hover};
+}
+.jennieKim {
+  --color-layout: #{$jennieKim-layout};
+  --color-sidebar: #{$jennieKim-sidebar};
+  --color-footer: #{$jennieKim-footer};
+
+  --color-text-primary: #{$jennieKim-text-primary};
+  --color-text-secondary: #{$jennieKim-text-secondary};
+  --color-text-btn: #{$jennieKim-text-btn};
+  --color-item-hover: #{$jennieKim-item-hover};
+  --color-action: #{$jennieKim-action};
+  --color-action-active: #{$jennieKim-action-active};
+  --color-primary-bg: #{$jennieKim-primary-bg};
+  --color-alpha-bg: #{$jennieKim-alpha-bg};
+  --color-icon: #{$jennieKim-icon};
+  --color-player: #{$jennieKim-player};
+  --color-border: #{$jennieKim-border};
+  --color-track: #{$jennieKim-track};
+  --color-text-hover: #{$jennieKim-text-hover};
+}
+
+.jisoo {
+  --color-layout: #{$jisoo-layout};
+  --color-sidebar: #{$jisoo-sidebar};
+  --color-footer: #{$jisoo-footer};
+
+  --color-text-primary: #{$jisoo-text-primary};
+  --color-text-secondary: #{$jisoo-text-secondary};
+  --color-text-btn: #{$jisoo-text-btn};
+  --color-item-hover: #{$jisoo-item-hover};
+  --color-action: #{$jisoo-action};
+  --color-action-active: #{$jisoo-action-active};
+  --color-primary-bg: #{$jisoo-primary-bg};
+  --color-alpha-bg: #{$jisoo-alpha-bg};
+  --color-icon: #{$jisoo-icon};
+  --color-player: #{$jisoo-player};
+  --color-border: #{$jisoo-border};
+  --color-track: #{$jisoo-track};
+  --color-text-hover: #{$jisoo-text-hover};
+}
+
+.rose {
+  --color-layout: #{$rose-layout};
+  --color-sidebar: #{$rose-sidebar};
+  --color-footer: #{$rose-footer};
+
+  --color-text-primary: #{$rose-text-primary};
+  --color-text-secondary: #{$rose-text-secondary};
+  --color-text-btn: #{$rose-text-btn};
+  --color-item-hover: #{$rose-item-hover};
+  --color-action: #{$rose-action};
+  --color-action-active: #{$rose-action-active};
+  --color-primary-bg: #{$rose-primary-bg};
+  --color-alpha-bg: #{$rose-alpha-bg};
+  --color-icon: #{$rose-icon};
+  --color-player: #{$rose-player};
+  --color-border: #{$rose-border};
+  --color-track: #{$rose-track};
+  --color-text-hover: #{$rose-text-hover};
+}
+
+.rola {
+  --color-layout: #{$rola-layout};
+  --color-sidebar: #{$rola-sidebar};
+  --color-footer: #{$rola-footer};
+
+  --color-text-primary: #{$rola-text-primary};
+  --color-text-secondary: #{$rola-text-secondary};
+  --color-text-btn: #{$rola-text-btn};
+  --color-item-hover: #{$rola-item-hover};
+  --color-action: #{$rola-action};
+  --color-action-active: #{$rola-action-active};
+  --color-primary-bg: #{$rola-primary-bg};
+  --color-alpha-bg: #{$rola-alpha-bg};
+  --color-icon: #{$rola-icon};
+  --color-player: #{$rola-player};
+  --color-border: #{$rola-border};
+  --color-track: #{$rola-track};
+  --color-text-hover: #{$rola-text-hover};
+}
+.christmas {
+  --color-layout: #{$christmas-layout};
+  --color-sidebar: #{$christmas-sidebar};
+  --color-footer: #{$christmas-footer};
+
+  --color-text-primary: #{$christmas-text-primary};
+  --color-text-secondary: #{$christmas-text-secondary};
+  --color-text-btn: #{$christmas-text-btn};
+  --color-item-hover: #{$christmas-item-hover};
+  --color-action: #{$christmas-action};
+  --color-action-active: #{$christmas-action-active};
+  --color-primary-bg: #{$christmas-primary-bg};
+  --color-alpha-bg: #{$christmas-alpha-bg};
+  --color-icon: #{$christmas-icon};
+  --color-player: #{$christmas-player};
+  --color-border: #{$christmas-border};
+  --color-track: #{$christmas-track};
+  --color-text-hover: #{$christmas-text-hover};
+}
+.conan {
+  --color-layout: #{$conan-layout};
+  --color-sidebar: #{$conan-sidebar};
+  --color-footer: #{$conan-footer};
+
+  --color-text-primary: #{$conan-text-primary};
+  --color-text-secondary: #{$conan-text-secondary};
+  --color-text-btn: #{$conan-text-btn};
+  --color-item-hover: #{$conan-item-hover};
+  --color-action: #{$conan-action};
+  --color-action-active: #{$conan-action-active};
+  --color-primary-bg: #{$conan-primary-bg};
+  --color-alpha-bg: #{$conan-alpha-bg};
+  --color-icon: #{$conan-icon};
+  --color-player: #{$conan-player};
+  --color-border: #{$conan-border};
+  --color-track: #{$conan-track};
+  --color-text-hover: #{$conan-text-hover};
+}
+.fukada {
+  --color-layout: #{$fukada-layout};
+  --color-sidebar: #{$fukada-sidebar};
+  --color-footer: #{$fukada-footer};
+
+  --color-text-primary: #{$fukada-text-primary};
+  --color-text-secondary: #{$fukada-text-secondary};
+  --color-text-btn: #{$fukada-text-btn};
+  --color-item-hover: #{$fukada-item-hover};
+  --color-action: #{$fukada-action};
+  --color-action-active: #{$fukada-action-active};
+  --color-primary-bg: #{$fukada-primary-bg};
+  --color-alpha-bg: #{$fukada-alpha-bg};
+  --color-icon: #{$fukada-icon};
+  --color-player: #{$fukada-player};
+  --color-border: #{$fukada-border};
+  --color-track: #{$fukada-track};
+  --color-text-hover: #{$fukada-text-hover};
+}
+.dark {
+  --color-layout: #{$dark-layout};
+  --color-sidebar: #{$dark-sidebar};
+  --color-footer: #{$dark-footer};
+
+  --color-text-primary: #{$dark-text-primary};
+  --color-text-secondary: #{$dark-text-secondary};
+  --color-text-btn: #{$dark-text-btn};
+  --color-item-hover: #{$dark-item-hover};
+  --color-action: #{$dark-action};
+  --color-action-active: #{$dark-action-active};
+  --color-primary-bg: #{$dark-primary-bg};
+  --color-alpha-bg: #{$dark-alpha-bg};
+  --color-icon: #{$dark-icon};
+  --color-player: #{$dark-player};
+  --color-border: #{$dark-border};
+  --color-track: #{$dark-track};
+  --color-text-hover: #{$dark-text-hover};
+}
+.blue-bold {
+  --color-layout: #{$blue-bold-layout};
+  --color-sidebar: #{$blue-bold-sidebar};
+  --color-footer: #{$blue-bold-footer};
+
+  --color-text-primary: #{$blue-bold-text-primary};
+  --color-text-secondary: #{$blue-bold-text-secondary};
+  --color-text-btn: #{$blue-bold-text-btn};
+  --color-item-hover: #{$blue-bold-item-hover};
+  --color-action: #{$blue-bold-action};
+  --color-action-active: #{$blue-bold-action-active};
+  --color-primary-bg: #{$blue-bold-primary-bg};
+
+  --color-alpha-bg: #{$blue-bold-alpha-bg};
+  --color-icon: #{$blue-bold-icon};
+  --color-player: #{$blue-bold-player};
+  --color-border: #{$blue-bold-border};
+  --color-track: #{$blue-bold-track};
+  --color-text-hover: #{$blue-bold-text-hover};
+}
+.blue {
+  --color-layout: #{$blue-layout};
+  --color-sidebar: #{$blue-sidebar};
+  --color-footer: #{$blue-footer};
+
+  --color-text-primary: #{$blue-text-primary};
+  --color-text-secondary: #{$blue-text-secondary};
+  --color-text-btn: #{$blue-text-btn};
+  --color-item-hover: #{$blue-item-hover};
+  --color-action: #{$blue-action};
+  --color-action-active: #{$blue-action-active};
+  --color-primary-bg: #{$blue-primary-bg};
+
+  --color-alpha-bg: #{$blue-alpha-bg};
+  --color-icon: #{$blue-icon};
+  --color-player: #{$blue-player};
+  --color-border: #{$blue-border};
+  --color-track: #{$blue-track};
+  --color-text-hover: #{$blue-text-hover};
+}
+.green {
+  --color-layout: #{$green-layout};
+  --color-sidebar: #{$green-sidebar};
+  --color-footer: #{$green-footer};
+  --color-text-primary: #{$green-text-primary};
+  --color-text-secondary: #{$green-text-secondary};
+  --color-text-btn: #{$green-text-btn};
+  --color-item-hover: #{$green-item-hover};
+  --color-action: #{$green-action};
+  --color-action-active: #{$green-action-active};
+  --color-primary-bg: #{$green-primary-bg};
+
+  --color-alpha-bg: #{$green-alpha-bg};
+  --color-icon: #{$green-icon};
+  --color-player: #{$green-player};
+  --color-border: #{$green-border};
+  --color-track: #{$green-track};
+  --color-text-hover: #{$green-text-hover};
+}
+.brown {
+  --color-layout: #{$brown-layout};
+  --color-sidebar: #{$brown-sidebar};
+  --color-footer: #{$brown-footer};
+
+  --color-text-primary: #{$brown-text-primary};
+  --color-text-secondary: #{$brown-text-secondary};
+  --color-text-btn: #{$brown-text-btn};
+  --color-item-hover: #{$brown-item-hover};
+  --color-action: #{$brown-action};
+  --color-action-active: #{$brown-action-active};
+  --color-primary-bg: #{$brown-primary-bg};
+
+  --color-alpha-bg: #{$brown-alpha-bg};
+  --color-icon: #{$brown-icon};
+  --color-player: #{$brown-player};
+  --color-border: #{$brown-border};
+  --color-track: #{$brown-track};
+  --color-text-hover: #{$brown-text-hover};
+}
+.pink {
+  --color-layout: #{$pink-layout};
+  --color-sidebar: #{$pink-sidebar};
+  --color-footer: #{$pink-footer};
+
+  --color-text-primary: #{$pink-text-primary};
+  --color-text-secondary: #{$pink-text-secondary};
+  --color-text-btn: #{$pink-text-btn};
+  --color-item-hover: #{$pink-item-hover};
+  --color-action: #{$pink-action};
+  --color-action-active: #{$pink-action-active};
+  --color-primary-bg: #{$pink-primary-bg};
+
+  --color-alpha-bg: #{$pink-alpha-bg};
+  --color-icon: #{$pink-icon};
+  --color-player: #{$pink-player};
+  --color-border: #{$pink-border};
+  --color-track: #{$pink-track};
+  --color-text-hover: #{$pink-text-hover};
+}
+.red {
+  --color-layout: #{$red-layout};
+  --color-sidebar: #{$red-sidebar};
+  --color-footer: #{$red-footer};
+
+  --color-text-primary: #{$red-text-primary};
+  --color-text-secondary: #{$red-text-secondary};
+  --color-text-btn: #{$red-text-btn};
+  --color-item-hover: #{$red-item-hover};
+  --color-action: #{$red-action};
+  --color-action-active: #{$red-action-active};
+  --color-primary-bg: #{$red-primary-bg};
+
+  --color-alpha-bg: #{$red-alpha-bg};
+  --color-icon: #{$red-icon};
+  --color-player: #{$red-player};
+  --color-border: #{$red-border};
+  --color-track: #{$red-track};
+  --color-text-hover: #{$red-text-hover};
+}
+.light {
+  --color-layout: #{$light-layout};
+  --color-sidebar: #{$light-sidebar};
+  --color-footer: #{$light-footer};
+
+  --color-text-primary: #{$light-text-primary};
+  --color-text-secondary: #{$light-text-secondary};
+  --color-text-btn: #{$light-text-btn};
+  --color-item-hover: #{$light-item-hover};
+  --color-action: #{$light-action};
+  --color-action-active: #{$light-action-active};
+  --color-primary-bg: #{$light-primary-bg};
+
+  --color-alpha-bg: #{$light-alpha-bg};
+  --color-icon: #{$light-icon};
+  --color-player: #{$light-player};
+  --color-border: #{$light-border};
+  --color-track: #{$light-track};
+  --color-text-hover: #{$light-text-hover};
+}
+.gray-light {
+  --color-layout: #{$gray-light-layout};
+  --color-sidebar: #{$gray-light-sidebar};
+  --color-footer: #{$gray-light-footer};
+
+  --color-text-primary: #{$gray-light-text-primary};
+  --color-text-secondary: #{$gray-light-text-secondary};
+  --color-text-btn: #{$gray-light-text-btn};
+  --color-item-hover: #{$gray-light-item-hover};
+  --color-action: #{$gray-light-action};
+  --color-action-active: #{$gray-light-action-active};
+  --color-primary-bg: #{$gray-light-primary-bg};
+  --color-alpha-bg: #{$gray-light-alpha-bg};
+  --color-icon: #{$gray-light-icon};
+  --color-player: #{$gray-light-player};
+  --color-border: #{$gray-light-border};
+  --color-track: #{$gray-light-track};
+  --color-text-hover: #{$gray-light-text-hover};
+}
+.blue-light {
+  --color-layout: #{$blue-light-layout};
+  --color-sidebar: #{$blue-light-sidebar};
+  --color-footer: #{$blue-light-footer};
+
+  --color-text-primary: #{$blue-light-text-primary};
+  --color-text-secondary: #{$blue-light-text-secondary};
+  --color-text-btn: #{$blue-light-text-btn};
+  --color-item-hover: #{$blue-light-item-hover};
+  --color-action: #{$blue-light-action};
+  --color-action-active: #{$blue-light-action-active};
+  --color-primary-bg: #{$blue-light-primary-bg};
+
+  --color-alpha-bg: #{$blue-light-alpha-bg};
+  --color-icon: #{$blue-light-icon};
+  --color-player: #{$blue-light-player};
+  --color-border: #{$blue-light-border};
+  --color-track: #{$blue-light-track};
+  --color-text-hover: #{$blue-light-text-hover};
+}
+.pink-light {
+  --color-layout: #{$pink-light-layout};
+  --color-sidebar: #{$pink-light-sidebar};
+  --color-footer: #{$pink-light-footer};
+  --color-text-primary: #{$pink-light-text-primary};
+  --color-text-secondary: #{$pink-light-text-secondary};
+  --color-text-btn: #{$pink-light-text-btn};
+  --color-item-hover: #{$pink-light-item-hover};
+  --color-action: #{$pink-light-action};
+  --color-action-active: #{$pink-light-action-active};
+  --color-primary-bg: #{$pink-light-primary-bg};
+
+  --color-alpha-bg: #{$pink-light-alpha-bg};
+  --color-icon: #{$pink-light-icon};
+  --color-player: #{$pink-light-player};
+  --color-border: #{$pink-light-border};
+  --color-track: #{$pink-light-track};
+  --color-text-hover: #{$pink-light-text-hover};
+}

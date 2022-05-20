@@ -8,10 +8,9 @@ import { createSong } from "../../../redux/reducer/songSlice";
 import format from "format-duration";
 import { setIndexZingChart } from "../../../redux/reducer/zingchartSlice";
 
-const TableItem = ({ item, index }) => {
+const TableItem = ({ item, index, icon }) => {
   const isPlay = useSelector((state) => state.home.isPlay);
   const songId = useSelector((state) => state.song.songId);
-
   const dispatch = useDispatch();
 
   const handleSelectSong = (
@@ -59,10 +58,12 @@ const TableItem = ({ item, index }) => {
             <span className={clsx(style.number, `number${index + 1}`)}>
               {index + 1}
             </span>
+
             <div className={style.sort}>
               <MdHorizontalRule />
             </div>
           </div>
+
           <div className={style.songThumb}>
             <img
               src={item.thumbnail}
@@ -89,7 +90,7 @@ const TableItem = ({ item, index }) => {
 
         <div className={style.mediaContent}>
           <a href="#" className={style.link}>
-            {item.album.title}
+            {/* {item.album.title} */}
           </a>
         </div>
 

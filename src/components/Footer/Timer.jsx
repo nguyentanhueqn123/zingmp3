@@ -6,7 +6,7 @@ const Timer = ({ audio }) => {
 
   audio.ontimeupdate = () => {
     let second = Math.floor(audio.currentTime) * 1000;
-    setTime(format(second));
+    setTime(format(second, { leading: true }));
   };
   return <span className={style.trackTime}>{time}</span>;
 };

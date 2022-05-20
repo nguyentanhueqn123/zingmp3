@@ -1,10 +1,10 @@
 import React from "react";
-import MVList from "../MVList/MVList";
+import MVContainer from "../MVList/MVContainer";
 
 const MvPage = () => {
   return (
     <>
-      <MVList />
+      <MVContainer />
     </>
   );
 };

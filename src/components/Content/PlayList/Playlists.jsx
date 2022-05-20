@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Playlist from "./Playlist";
-import LoadingList from "./LoadingList";
+import SkeletonLoading from "../Loading/SkeletonLoading";
 
 const PlayLists = () => {
   const title1 = useSelector((state) => state.khampha.titles.title1);
@@ -20,17 +20,35 @@ const PlayLists = () => {
   return (
     <>
       {handleCheckLoading(title1, playlist1) ? (
-        <LoadingList />
+        <SkeletonLoading
+          laptop="l-2-4"
+          tablet="m-3"
+          mobile="c-4"
+          num="5"
+          mt="mt-4"
+        />
       ) : (
         <Playlist title={title1} playlist={playlist1} />
       )}
       {handleCheckLoading(title2, playlist2) ? (
-        <LoadingList />
+        <SkeletonLoading
+          laptop="l-2-4"
+          tablet="m-3"
+          mobile="c-4"
+          num="5"
+          mt="mt-4"
+        />
       ) : (
         <Playlist title={title2} playlist={playlist2} />
       )}
       {handleCheckLoading(title3, playlist3) ? (
-        <LoadingList />
+        <SkeletonLoading
+          laptop="l-2-4"
+          tablet="m-3"
+          mobile="c-4"
+          num="5"
+          mt="mt-4"
+        />
       ) : (
         <Playlist title={title3} playlist={playlist3} />
       )}
