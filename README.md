@@ -2,7 +2,7 @@ OVERVIEW
 
 1.Complication with any device (pc, tablet, phone)
 
-2.Change background smoothly with NEW img gril !
+2.Change background smoothly with NEW img girl !
 ![background](https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.15752-9/279125658_534109791545755_8503298091830916966_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_ohc=-NUAxiGLo40AX_HaYIX&_nc_ht=scontent.fsgn5-2.fna&oh=03_AVJtZHC5w6k-_NuAV5GmFdlrhQn_BjGUnlfJWJ6PT37X-g&oe=62AEB8FE)
 
 3.Look up your song favorite and see lyric
