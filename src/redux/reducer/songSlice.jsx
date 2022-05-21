@@ -4,14 +4,18 @@ import { setConfig, config } from "../../localStorage/localStorage";
 export const songReducer = createSlice({
   name: "song",
   initialState: {
-    songId: config.songId || "ZO98F9W6",
+    songId: config.songId || "ZZA07BED",
     songUrl: config.songUrl || "",
-    thumbnail: config.thumbnail || "",
-    thumbnailM: config.thumbnailM || "",
-    title: config.title || "",
-    artistsNames: config.artistsNames || "",
+    thumbnail:
+      config.thumbnail ||
+      "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/1/8/0/7/1807c6b5fcc7058a14e1a288801221c7.jpg",
+    thumbnailM:
+      config.thumbnailM ||
+      "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/1/8/0/7/1807c6b5fcc7058a14e1a288801221c7.jpg",
+    title: config.title || "Sau Lưng Anh Có Ai Kìa",
+    artistsNames: config.artistsNames || "Thiều Bảo Trâm",
     loading: config.loading || false,
-    duration: config.duration || 0,
+    duration: config.duration || 303,
     album: config.album || "",
     lyric: config.lyric || [],
 
