@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { setConfig, config } from "../../localStorage/localStorage";
 
-const themeStorages = JSON.parse(localStorage.getItem("theme"));
-const durationStorage = JSON.parse(localStorage.getItem("duration"));
 export const homeReducer = createSlice({
   name: "home",
   initialState: {
@@ -11,15 +10,17 @@ export const homeReducer = createSlice({
     isSetting: false,
     active: "Khám phá",
     fullscreen: false,
-    time: durationStorage.time || 0,
-    percentage: durationStorage.percentage || 0,
+    time: config.time || 0,
+    timePercentage: config.timePercentage || 0,
     history: [],
     search: {},
+    volume: config.volume || 0,
+    volumePercentage: config.volumePercentage || 0,
     mute: false,
-    theme: themeStorages || {
+    theme: {
       active: false,
-      type: "",
-      className: "",
+      themeType: config.themeType || "",
+      themeClass: config.themeClass || "",
     },
     songInfo: {
       title: "",
@@ -39,11 +40,20 @@ export const homeReducer = createSlice({
     },
     setDuration: (state, action) => {
       state.time = action.payload.time;
-      state.percentage = action.payload.percentage;
+      state.timePercentage = action.payload.timePercentage;
 
-      const jsonDuration = JSON.stringify(action.payload);
-      localStorage.setItem("duration", jsonDuration);
+      setConfig("time", action.payload.time);
+      setConfig("timePercentage", action.payload.timePercentage);
     },
+
+    setVolume: (state, action) => {
+      state.volume = action.payload.volume;
+      state.volumePercentage = action.payload.volumePercentage;
+
+      setConfig("volume", action.payload.volume);
+      setConfig("volumePercentage", action.payload.volumePercentage);
+    },
+
     setSearch: (state, action) => {
       state.search = action.payload;
     },
@@ -78,11 +88,10 @@ export const homeReducer = createSlice({
       state.theme.active = action.payload;
     },
     setThemeType: (state, action) => {
-      state.theme.type = action.payload.type;
-      state.theme.className = action.payload.className;
-
-      const jsonTheme = JSON.stringify(action.payload);
-      localStorage.setItem("theme", jsonTheme);
+      state.theme.themeType = action.payload.themeType;
+      state.theme.themeClass = action.payload.themeClass;
+      setConfig("themeType", action.payload.themeType);
+      setConfig("themeClass", action.payload.themeClass);
     },
     setSeeMore: (state, action) => {
       state.seeMore = action.payload;
@@ -97,6 +106,7 @@ export const {
   setSearch,
   setSongInfo,
   setHeart,
+  setVolume,
   setMute,
   setActive,
   setFullScreen,

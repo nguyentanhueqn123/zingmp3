@@ -15,8 +15,8 @@ function App() {
   const showfullscreen = useSelector((state) => state.home.fullscreen);
   const showToast = useSelector((state) => state.home.isToast);
   const themeActive = useSelector((state) => state.home.theme.active);
-  const themeType = useSelector((state) => state.home.theme.type);
-  const themeClass = useSelector((state) => state.home.theme.className);
+  const themeType = useSelector((state) => state.home.theme.themeType);
+  const themeClass = useSelector((state) => state.home.theme.themeClass);
 
   const headerRef = useRef();
   const contentRef = useRef();

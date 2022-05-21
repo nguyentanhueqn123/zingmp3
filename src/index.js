@@ -65,7 +65,7 @@ root.render(
               <Route path=":artistLink" element={<Artist />} />
             </Route>
 
-            <Route path="*" element={<Notfound />} />
+            {/* <Route path="*" element={<Notfound />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>

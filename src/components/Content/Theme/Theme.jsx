@@ -4,14 +4,14 @@ import ThemeItem from "./ThemeItem";
 import { IoCloseOutline } from "react-icons/io5";
 import { setThemeActive, setThemeType } from "../../../redux/reducer/homeSlice";
 import { useDispatch } from "react-redux";
-import { Dynamic, ChuDe, NgheSi, MauToi, MauSang } from "./data";
+import { Dynamic, ChuDe, ImgGirl, NgheSi, MauToi, MauSang } from "./data";
 
 const Theme = () => {
   const dispatch = useDispatch();
-  const handleChangeTheme = (type, className) => {
+  const handleChangeTheme = (themeType, themeClass) => {
     const item = {
-      type,
-      className,
+      themeType,
+      themeClass,
     };
     dispatch(setThemeType(item));
     dispatch(setThemeActive(false));
@@ -32,6 +32,11 @@ const Theme = () => {
           <ThemeItem
             title="Chủ Đề"
             theme={ChuDe}
+            handleChangeTheme={handleChangeTheme}
+          />
+          <ThemeItem
+            title="Girl Img"
+            theme={ImgGirl}
             handleChangeTheme={handleChangeTheme}
           />
           <ThemeItem

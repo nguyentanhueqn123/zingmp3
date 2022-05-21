@@ -1,13 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-const indexNewSong = JSON.parse(localStorage.getItem("indexNewSong"));
-const newSongsStoreage = JSON.parse(localStorage.getItem("newSongs"));
+import { setConfig, config } from "../../localStorage/localStorage";
 
 export const moiphathanhSlice = createSlice({
   name: "moiphathanh",
   initialState: {
-    index: indexNewSong || 0,
-
-    newSongs: newSongsStoreage || [
+    index: config.indexNewSong || 0,
+    newSongs: config.newSongs || [
       {
         album: {
           title: "",
@@ -24,11 +22,11 @@ export const moiphathanhSlice = createSlice({
       state.newSongs = action.payload;
       state.loading = false;
 
-      const jsonNewSongs = JSON.stringify(action.payload);
-      localStorage.setItem("newSongs", jsonNewSongs);
+      setConfig("newSongs", action.payload);
     },
     setIndexNewSong: (state, action) => {
       state.index = action.payload;
+      setConfig("indexNewSong", action.payload);
     },
   },
 });

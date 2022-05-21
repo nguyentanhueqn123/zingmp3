@@ -5,29 +5,27 @@ import { GiMicrophone } from "react-icons/gi";
 import { VscMultipleWindows, VscMute, VscUnmute } from "react-icons/vsc";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { AiOutlineUnorderedList } from "react-icons/ai";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setVolume } from "../../../redux/reducer/homeSlice";
 
 const Volume = ({}, ref) => {
   const volumeRef = useRef();
   const volumePercentRef = useRef();
-  const storageVolume = JSON.parse(localStorage.getItem("volume"));
+  const dispatch = useDispatch();
   const mute = useSelector((state) => state.home.mute);
+  const volume = useSelector((state) => state.home.volume);
+  const volumePercentage = useSelector((state) => state.home.volumePercentage);
   const audioRef = ref;
 
   const handleVolume = () => {
     if (audioRef.current.volume * 100 !== volumeRef.value) {
       volumePercentRef.current.style.width = volumeRef.current.value + "%";
       audioRef.current.volume = volumeRef.current.value / 100;
-      // dispatch(setMute(false));
-
-      // if (audioRef.current.volume === 0) {
-      //   dispatch(setMute(true));
-      // }
       const jsonVolume = {
         volume: audioRef.current.volume,
         volumePercent: `${volumeRef.current.value}%`,
       };
-      localStorage.setItem("volume", JSON.stringify(jsonVolume));
+      dispatch(setVolume(jsonVolume));
     }
   };
   return (
@@ -50,7 +48,7 @@ const Volume = ({}, ref) => {
           type="range"
           name=""
           id="volume"
-          value={storageVolume.volume || 100}
+          value={volume || 100}
           min="0"
           max="100"
           className={style.volumeCover}
@@ -60,7 +58,7 @@ const Volume = ({}, ref) => {
           <div
             ref={volumePercentRef}
             className={style.bar}
-            style={{ width: storageVolume.volumePercent }}
+            style={{ width: volumePercentage }}
             id="volumePercent"
           ></div>
         </div>

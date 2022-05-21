@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-const indexZingChart = JSON.parse(localStorage.getItem("indexZingChart"));
-const topChartsStorage = JSON.parse(localStorage.getItem("topCharts"));
+import { setConfig, config } from "../../localStorage/localStorage";
+
 export const zingchartReducer = createSlice({
   name: "zingchart",
   initialState: {
-    index: indexZingChart || 0,
-    topCharts: topChartsStorage || [
+    index: config.indexZingChart || 0,
+    topCharts: config.topCharts || [
       {
         album: {
           title: "",
@@ -22,11 +22,11 @@ export const zingchartReducer = createSlice({
       state.topCharts = action.payload;
       state.loading = false;
 
-      const jsonTopChart = JSON.stringify(action.payload);
-      localStorage.setItem("topCharts", jsonTopChart);
+      setConfig("topCharts", action.payload);
     },
     setIndexZingChart: (state, action) => {
       state.index = action.payload;
+      setConfig("indexZingChart", action.payload);
     },
   },
 });
