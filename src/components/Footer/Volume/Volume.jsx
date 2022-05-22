@@ -9,13 +9,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { setVolume } from "../../../redux/reducer/homeSlice";
 
 const Volume = ({}, ref) => {
+  const audioRef = ref;
   const volumeRef = useRef();
   const volumePercentRef = useRef();
   const dispatch = useDispatch();
   const mute = useSelector((state) => state.home.mute);
   const volume = useSelector((state) => state.home.volume);
   const volumePercentage = useSelector((state) => state.home.volumePercentage);
-  const audioRef = ref;
 
   const handleVolume = () => {
     if (audioRef.current.volume * 100 !== volumeRef.value) {
@@ -23,7 +23,7 @@ const Volume = ({}, ref) => {
       audioRef.current.volume = volumeRef.current.value / 100;
       const jsonVolume = {
         volume: audioRef.current.volume,
-        volumePercent: `${volumeRef.current.value}%`,
+        volumePercentage: `${volumeRef.current.value}%`,
       };
       dispatch(setVolume(jsonVolume));
     }
@@ -48,7 +48,7 @@ const Volume = ({}, ref) => {
           type="range"
           name=""
           id="volume"
-          value={volume || 100}
+          value={volume}
           min="0"
           max="100"
           className={style.volumeCover}

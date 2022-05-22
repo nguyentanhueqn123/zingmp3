@@ -73,7 +73,7 @@ const Footer = () => {
     return () => {
       dispatch(setLoading(true));
     };
-  }, [dispatch, songId, index]);
+  }, [dispatch, songId, index, indexNewSong]);
 
   const handleUpdatePercentage = () => {
     if (audioRef.current.duration) {
@@ -145,7 +145,7 @@ const Footer = () => {
     preSong();
   };
   const handleLoadStart = () => {
-    dispatch(setPlay(false));
+    dispatch(setPlay(isPlay));
   };
   const handleAudioEnd = () => {
     isRepeat ? audioRef.current.play() : btnNextRef.current.click();

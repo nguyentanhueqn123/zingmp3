@@ -133,9 +133,11 @@
 }
 .karaoke {
   height: 90vh;
-  overflow: auto;
   text-align: center;
   height: 22rem;
+  overflow: auto;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -148,6 +150,10 @@
   }
 }
 .karaokeLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   color: var(--color-text-primary);
   font-size: 50px;
   font-weight: 700;
@@ -203,6 +209,8 @@
   margin-left: 4rem;
   height: 45rem;
   overflow: auto;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 .lineTitle {
   font-size: 40px;

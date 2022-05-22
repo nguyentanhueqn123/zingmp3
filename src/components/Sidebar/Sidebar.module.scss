@@ -74,6 +74,8 @@
 
   &:hover {
     overflow: auto;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
   }
 
   &::-webkit-scrollbar {

@@ -14,8 +14,8 @@ export const homeReducer = createSlice({
     timePercentage: config.timePercentage || 0,
     history: [],
     search: {},
-    volume: config.volume || 0,
-    volumePercentage: config.volumePercentage || 0,
+    volume: config.volume || 1,
+    volumePercentage: config.volumePercentage || "100%",
     mute: false,
     theme: {
       active: false,
