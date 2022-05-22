@@ -13,6 +13,7 @@ import SkeletonLoading from "../Loading/SkeletonLoading";
 import style from "./Slide.module.scss";
 import artists from "./data";
 import { setArtist, setLoading } from "../../../redux/reducer/theoDoiSlice";
+import Loading from "../Loading/Loading";
 
 const Slide = ({ rectangle, triangle, circle, square }) => {
   const banners = useSelector((state) => state.khampha.banner);
@@ -130,7 +131,8 @@ const Slide = ({ rectangle, triangle, circle, square }) => {
 
       {circle &&
         (Object.keys(liveStream).length === 0 ? (
-          <SkeletonLoading laptop="l-1" tablet="m-2" mobile="c-3" />
+          // <SkeletonLoading laptop="l-1" tablet="m-2" mobile="c-3" />
+          <Loading />
         ) : (
           <div className={style.container}>
             <div className={style.wrapper}>
