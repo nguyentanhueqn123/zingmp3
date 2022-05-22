@@ -1,17 +1,15 @@
 import React from "react";
 import { BsPlayFill } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import style from "./Album.module.scss";
 import Table from "../Table/Table";
 import TableItem from "../Table/TableItem";
 import clsx from "clsx";
-import { setToast } from "../../../redux/reducer/homeSlice";
 
-const Album = () => {
+const Song = () => {
   const songInfo = useSelector((state) => state.home.songInfo);
   const topCharts = useSelector((state) => state.zingchart.topCharts);
   const loading = useSelector((state) => state.zingchart.loading);
-  const dispatch = useDispatch();
 
   return (
     <div className={style.cover}>
@@ -19,13 +17,10 @@ const Album = () => {
         <div className="row">
           <div className={clsx("col l-4", style.center)}>
             <div className={style.sectionLeft}>
-              <div
-                className={style.imgCover}
-                onClick={() => dispatch(setToast(true))}
-              >
+              <div className={style.imgCover}>
                 <img
-                  src="https://i.pinimg.com/564x/b3/31/29/b331297876db5a600ffff31f191bf660.jpg"
-                  alt="img-album"
+                  src={songInfo.thumbnailM}
+                  alt="img-song"
                   className={style.sectionImg}
                 />
                 <div className={style.alphaBackground}>
@@ -59,4 +54,4 @@ const Album = () => {
   );
 };
 
-export default Album;
+export default Song;

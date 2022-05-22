@@ -244,17 +244,48 @@
 @media (max-width: 739px) {
   .cardContent {
     width: 100px;
-    margin-right: 15px;
+    margin: 0 10px;
   }
   .topContent {
     height: 100px;
   }
   .innerItem {
     width: 70px;
+    margin: 10px;
+    height: 110px;
   }
   .slide {
     width: 300%;
     margin-bottom: 5rem;
     margin-top: 2rem;
+  }
+  .controlPre,
+  .controlNext {
+    display: none;
+  }
+  .container {
+    margin-top: 0;
+  }
+  .wrapper {
+    margin-top: 2rem;
+  }
+  .content,
+  .carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      display: none;
+      -webkit-border-radius: 10px;
+      border-radius: 20px;
+      background-color: #fafafa;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+  }
+  .heightS {
+    height: 110px;
   }
 }

@@ -220,7 +220,7 @@
     padding-top: 1rem;
   }
   .headerCover {
-    margin-top: 0;
+    margin-top: 10px;
     padding-left: 30px;
     margin-bottom: 1rem;
   }
@@ -248,5 +248,11 @@
     font-size: 12px;
     padding: 3px 20px;
     border: 2px solid var(--color-text-secondary);
+  }
+  .mediaContent {
+    display: none;
+  }
+  .title {
+    font-size: 14px;
   }
 }

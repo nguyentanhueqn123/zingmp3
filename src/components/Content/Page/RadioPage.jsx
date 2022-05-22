@@ -6,7 +6,6 @@ import {
   renderLiveStream,
   renderPlaylist,
 } from "../../../redux/reducer/radioSlice";
-import PlayListRadio from "../PlayList/PlayListRadio";
 
 const RadioPage = () => {
   const dispatch = useDispatch();
@@ -27,7 +26,6 @@ const RadioPage = () => {
   return (
     <>
       <Slide circle />
-      <PlayListRadio />
     </>
   );
 };

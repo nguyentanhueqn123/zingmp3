@@ -16,7 +16,7 @@ const Toast = () => {
         <div className={style.info}>
           <div className={style.title}>Success</div>
           <div className={style.des}>
-            Tiền éo đâu mà nạp vip . Nhưng bạn có lòng thì Đạt vẫn nhận :))
+            Tiền đâu mà nạp vip . Nhưng bạn có lòng thì Đạt vẫn nhận :))
           </div>
         </div>
         <div className={style.close} onClick={() => dispatch(setToast(false))}>

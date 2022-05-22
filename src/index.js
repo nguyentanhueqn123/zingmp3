@@ -16,6 +16,7 @@ import CaNhanPage from "./components/Content/Page/CaNhanPage";
 import Top100Page from "./components/Content/Page/Top100Page";
 import AlbumPage from "./components/Content/Page/AlbumPage";
 import Artist from "./components/Content/Artist/Artist";
+import Song from "./components/Content/Album/Song";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -58,12 +59,16 @@ root.render(
             <Route path="album" element={<AlbumPage />}>
               <Route path=":albumLink" element={<AlbumPage />} />
             </Route>
-            <Route path="bai-hat" element={<AlbumPage />}>
-              <Route path=":baihatLink" element={<AlbumPage />} />
+            <Route path="bai-hat" element={<Song />}>
+              <Route path=":baihatLink" element={<Song />} />
             </Route>
             <Route path="artist" element={<Artist />}>
               <Route path=":artistLink" element={<Artist />} />
             </Route>
+
+            <Route path="baihat" element={<Notfound />} />
+            <Route path="playlist" element={<Notfound />} />
+            <Route path="ganday" element={<Notfound />} />
 
             {/* <Route path="*" element={<Notfound />} /> */}
           </Route>

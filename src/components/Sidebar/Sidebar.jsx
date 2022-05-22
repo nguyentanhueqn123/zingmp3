@@ -69,7 +69,7 @@ const Sidebar = () => {
     {
       img: "https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.0.13/static/media/my-song.cf0cb0b4.svg",
       data: "Bài hát",
-      link: "/nhacmoi",
+      link: "/baihat",
     },
     {
       img: "https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.0.13/static/media/my-playlist.7e92a5f0.svg",

@@ -119,11 +119,20 @@
   .header {
     margin-top: -4rem;
     padding-left: 1.5rem;
+    margin-bottom: 14px;
+  }
+  .title {
+    margin: 5px 0;
+  }
+  .description {
+    margin: 0;
   }
   .list {
     overflow: auto;
     height: 18rem;
     flex-wrap: initial;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
       width: 0px;
