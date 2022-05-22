@@ -81,7 +81,7 @@
   opacity: 0.8;
 
   &:hover {
-    background-color: var(--color-text-primary);
+    background-color: var(--color-item-hover);
   }
 }
 .activeBtn {
@@ -108,7 +108,7 @@
   opacity: 0.8;
 
   &:hover {
-    background-color: var(--color-text-primary);
+    background-color: var(--color-item-hover);
   }
 }
 

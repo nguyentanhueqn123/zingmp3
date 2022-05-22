@@ -11,7 +11,7 @@ const RadioPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const getApiRadio = async () => {
-      const res = await axios
+      await axios
         .get("https://music-player-pink.vercel.app/api/home?page=2")
         .then((res) => {
           dispatch(renderLiveStream(res.data.data.items[0].items));
@@ -21,7 +21,7 @@ const RadioPage = () => {
         .catch((err) => console.log(err));
     };
     getApiRadio();
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

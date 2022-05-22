@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { RiAlbumLine } from "react-icons/ri";
 import { MdOutlineLibraryMusic } from "react-icons/md";
 import { BsBarChartLine } from "react-icons/bs";
