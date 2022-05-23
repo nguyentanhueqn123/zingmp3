@@ -28,6 +28,7 @@ import {
 } from "../../redux/reducer/homeSlice";
 import { setIndexZingChart } from "../../redux/reducer/zingchartSlice";
 import Volume from "./Volume/Volume";
+import { setConfig, config } from "../../localStorage/localStorage";
 
 const Footer = () => {
   const dispatch = useDispatch();
@@ -36,7 +37,6 @@ const Footer = () => {
   const btnNextRef = useRef();
   const audio = document.querySelector("#audio");
 
-  const storageSong = JSON.parse(localStorage.getItem("song"));
   const time = useSelector((state) => state.home.time);
   const percentage = useSelector((state) => state.home.percentage);
   const isPlay = useSelector((state) => state.home.isPlay);
@@ -52,19 +52,16 @@ const Footer = () => {
   const title = useSelector((state) => state.song.title);
   const artistsNames = useSelector((state) => state.song.artistsNames);
   const duration = useSelector((state) => state.song.duration);
-  const showfullscreen = useSelector((state) => state.home.fullscreen);
+  const showFullScreen = useSelector((state) => state.home.fullscreen);
 
   useEffect(() => {
     const render = async () => {
-      const res = await axios
+      await axios
         .get(`https://music-player-pink.vercel.app/api/song?id=${songId}`)
         .then((res) => {
           // get value in array 128, vip
           const data = Object.values(res.data.data);
           dispatch(renderSong(data[0]));
-          // set indexZingChart
-          localStorage.setItem("indexZingChart", JSON.stringify(index));
-          localStorage.setItem("indexNewSong", JSON.stringify(indexNewSong));
         })
         .catch((err) => console.error(err));
     };
@@ -146,6 +143,7 @@ const Footer = () => {
   };
   const handleLoadStart = () => {
     dispatch(setPlay(isPlay));
+    isPlay ? audioRef.current.play() : audioRef.current.pause();
   };
   const handleAudioEnd = () => {
     isRepeat ? audioRef.current.play() : btnNextRef.current.click();
@@ -153,7 +151,7 @@ const Footer = () => {
 
   return (
     <div className={style.playerControl}>
-      {!showfullscreen && (
+      {!showFullScreen && (
         <div className={style.playerLeft}>
           <div className={style.media}>
             <div
@@ -271,13 +269,13 @@ const Footer = () => {
             </span>
           ) : (
             <span className={style.duration}>
-              {format(storageSong.duration * 1000, { leading: true })}
+              {format(config.duration * 1000, { leading: true })}
             </span>
           )}
         </div>
       </div>
 
-      {!showfullscreen && <Volume ref={audioRef} />}
+      {!showFullScreen && <Volume ref={audioRef} />}
       <audio
         ref={audioRef}
         src={songUrl}

@@ -12,7 +12,7 @@ import Theme from "../Content/Theme/Theme";
 import Toast from "../Toast/Toast";
 
 function App() {
-  const showfullscreen = useSelector((state) => state.home.fullscreen);
+  const showFullScreen = useSelector((state) => state.home.fullscreen);
   const showToast = useSelector((state) => state.home.isToast);
   const themeActive = useSelector((state) => state.home.theme.active);
   const themeType = useSelector((state) => state.home.theme.themeType);
@@ -54,7 +54,7 @@ function App() {
 
       {themeActive && <Theme />}
       {showToast && <Toast />}
-      {showfullscreen && <FullScreen />}
+      {showFullScreen && <FullScreen />}
       <Footer />
     </div>
   );

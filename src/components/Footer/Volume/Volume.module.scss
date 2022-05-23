@@ -34,7 +34,8 @@
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   -webkit-tap-highlight-color: transparent;
-  width: 50%;
+  width: 90px;
+  margin-right: 10px;
 
   &:hover ~ .volumeBar,
   &:hover ~ .volumeBar .bar {
@@ -46,10 +47,8 @@
 }
 .volumeBar {
   position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 65px;
+  right: 10px;
+  width: 86px;
   height: 3px;
   background-color: var(--color-alpha-bg);
   border-radius: 999px;

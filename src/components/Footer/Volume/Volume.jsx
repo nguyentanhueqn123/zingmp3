@@ -8,7 +8,7 @@ import { AiOutlineUnorderedList } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { setVolume } from "../../../redux/reducer/homeSlice";
 
-const Volume = ({}, ref) => {
+const Volume = (props, ref) => {
   const audioRef = ref;
   const volumeRef = useRef();
   const volumePercentRef = useRef();
@@ -17,7 +17,7 @@ const Volume = ({}, ref) => {
   const volume = useSelector((state) => state.home.volume);
   const volumePercentage = useSelector((state) => state.home.volumePercentage);
 
-  const handleVolume = () => {
+  const handleVolume = (e) => {
     if (audioRef.current.volume * 100 !== volumeRef.value) {
       volumePercentRef.current.style.width = volumeRef.current.value + "%";
       audioRef.current.volume = volumeRef.current.value / 100;
@@ -48,7 +48,7 @@ const Volume = ({}, ref) => {
           type="range"
           name=""
           id="volume"
-          value={volume}
+          value={volume * 100}
           min="0"
           max="100"
           className={style.volumeCover}
