@@ -8,8 +8,8 @@ import clsx from "clsx";
 
 const Song = () => {
   const songInfo = useSelector((state) => state.home.songInfo);
-  const topCharts = useSelector((state) => state.zingchart.topCharts);
-  const loading = useSelector((state) => state.zingchart.loading);
+  const topCharts = useSelector((state) => state.zingChart.topCharts);
+  const loading = useSelector((state) => state.zingChart.loading);
 
   return (
     <div className={style.cover}>
