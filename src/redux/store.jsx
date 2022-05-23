@@ -1,22 +1,22 @@
 import { configureStore } from "@reduxjs/toolkit";
-import khamphaSlice from "./reducer/khamphaSlice";
-import zingchartSlice from "./reducer/zingchartSlice";
+import exploreSlice from "./reducer/exploreSlice";
+import zingChartSlice from "./reducer/zingChartSlice";
 import songSlice from "./reducer/songSlice";
 import homeSlice from "./reducer/homeSlice";
 import radioSlice from "./reducer/radioSlice";
-import moiphathanhSlice from "./reducer/moiphathanhSlice";
+import newSongSlice from "./reducer/newSongSlice";
 import mvSlice from "./reducer/mvSlice";
-import theoDoiSlice from "./reducer/theoDoiSlice";
+import followSlice from "./reducer/followSlice";
 
 export const store = configureStore({
   reducer: {
-    khampha: khamphaSlice,
-    zingchart: zingchartSlice,
+    explore: exploreSlice,
+    zingChart: zingChartSlice,
     song: songSlice,
     home: homeSlice,
     radio: radioSlice,
-    moiphathanh: moiphathanhSlice,
+    newSong: newSongSlice,
     mv: mvSlice,
-    theodoi: theoDoiSlice,
+    follow: followSlice,
   },
 });

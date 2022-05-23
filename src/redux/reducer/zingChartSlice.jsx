@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setConfig, config } from "../../localStorage/localStorage";
 
-export const zingchartReducer = createSlice({
-  name: "zingchart",
+export const zingChartReducer = createSlice({
+  name: "zingChart",
   initialState: {
     index: config.indexZingChart || 0,
     topCharts: config.topCharts || [
@@ -30,5 +30,5 @@ export const zingchartReducer = createSlice({
     },
   },
 });
-export const { showTopChart, setIndexZingChart } = zingchartReducer.actions;
-export default zingchartReducer.reducer;
+export const { showTopChart, setIndexZingChart } = zingChartReducer.actions;
+export default zingChartReducer.reducer;

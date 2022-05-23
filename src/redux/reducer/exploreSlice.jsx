@@ -1,12 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-export const homeReducer = createSlice({
-  name: "home",
+export const exploreReducer = createSlice({
+  name: "explore",
   initialState: {
     banner: [],
     titles: {
       title1: "",
       title2: "",
       title3: "",
+    },
+    sectionIds: {
+      sectionIds1: "",
+      sectionIds2: "",
+      sectionIds3: "",
     },
     playlists: {
       playlist1: [],
@@ -21,11 +26,15 @@ export const homeReducer = createSlice({
     showTitle: (state, action) => {
       state.titles = action.payload;
     },
+    showSectionId: (state, action) => {
+      state.sectionIds = action.payload;
+    },
     showPlaylist: (state, action) => {
       state.playlists = action.payload;
     },
   },
 });
 
-export const { showBanner, showPlaylist, showTitle } = homeReducer.actions;
-export default homeReducer.reducer;
+export const { showBanner, showPlaylist, showTitle, showSectionId } =
+  exploreReducer.actions;
+export default exploreReducer.reducer;

@@ -2,9 +2,9 @@ import React from "react";
 import Table from "../Table/Table";
 import { useSelector } from "react-redux";
 
-const ZingchartPage = () => {
-  const topCharts = useSelector((state) => state.zingchart.topCharts);
-  const loading = useSelector((state) => state.zingchart.loading);
+const ZingChartPage = () => {
+  const topCharts = useSelector((state) => state.zingChart.topCharts);
+  const loading = useSelector((state) => state.zingChart.loading);
 
   return (
     <>
@@ -19,4 +19,4 @@ const ZingchartPage = () => {
   );
 };
 
-export default ZingchartPage;
+export default ZingChartPage;

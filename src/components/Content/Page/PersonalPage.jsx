@@ -1,11 +1,10 @@
 import React from "react";
-import clsx from "clsx";
 import Table from "../Table/Table";
 import { useSelector } from "react-redux";
 
-const CaNhanPage = () => {
-  const topCharts = useSelector((state) => state.zingchart.topCharts);
-  const loading = useSelector((state) => state.zingchart.loading);
+const PersonalPage = () => {
+  const topCharts = useSelector((state) => state.zingChart.topCharts);
+  const loading = useSelector((state) => state.zingChart.loading);
 
   return (
     <>
@@ -14,4 +13,4 @@ const CaNhanPage = () => {
   );
 };
 
-export default CaNhanPage;
+export default PersonalPage;

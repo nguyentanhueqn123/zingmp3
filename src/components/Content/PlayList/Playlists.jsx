@@ -4,12 +4,12 @@ import Playlist from "./Playlist";
 import SkeletonLoading from "../Loading/SkeletonLoading";
 
 const PlayLists = () => {
-  const title1 = useSelector((state) => state.khampha.titles.title1);
-  const title2 = useSelector((state) => state.khampha.titles.title2);
-  const title3 = useSelector((state) => state.khampha.titles.title3);
-  const playlist1 = useSelector((state) => state.khampha.playlists.playlist1);
-  const playlist2 = useSelector((state) => state.khampha.playlists.playlist2);
-  const playlist3 = useSelector((state) => state.khampha.playlists.playlist3);
+  const title1 = useSelector((state) => state.explore.titles.title1);
+  const title2 = useSelector((state) => state.explore.titles.title2);
+  const title3 = useSelector((state) => state.explore.titles.title3);
+  const playlist1 = useSelector((state) => state.explore.playlists.playlist1);
+  const playlist2 = useSelector((state) => state.explore.playlists.playlist2);
+  const playlist3 = useSelector((state) => state.explore.playlists.playlist3);
   // console.log(playlist1, playlist2, playlist3);
 
   const handleCheckLoading = (title, playlist) => {

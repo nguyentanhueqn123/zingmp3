@@ -12,11 +12,11 @@ import axios from "axios";
 import SkeletonLoading from "../Loading/SkeletonLoading";
 import style from "./Slide.module.scss";
 import artists from "./data";
-import { setArtist, setLoading } from "../../../redux/reducer/theoDoiSlice";
+import { setArtist, setLoading } from "../../../redux/reducer/followSlice";
 import Loading from "../Loading/Loading";
 
 const Slide = ({ rectangle, triangle, circle, square }) => {
-  const banners = useSelector((state) => state.khampha.banner);
+  const banners = useSelector((state) => state.explore.banner);
   const liveStream = useSelector((state) => state.radio.liveStream);
 
   const [btnLeft, setBtnLeft] = useState(false);

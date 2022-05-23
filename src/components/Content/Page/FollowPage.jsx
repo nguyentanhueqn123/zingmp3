@@ -1,7 +1,7 @@
 import React from "react";
 import Slide from "../Slide/Slide";
 
-const TheoDoiPage = () => {
+const FollowPage = () => {
   return (
     <>
       <Slide triangle />
@@ -9,4 +9,4 @@ const TheoDoiPage = () => {
   );
 };
 
-export default TheoDoiPage;
+export default FollowPage;

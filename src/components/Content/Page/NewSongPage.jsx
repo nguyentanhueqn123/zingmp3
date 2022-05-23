@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Table from "../Table/Table";
 
-const NhacMoiPage = () => {
-  const newSongs = useSelector((state) => state.moiphathanh.newSongs);
-  const loading = useSelector((state) => state.moiphathanh.loading);
+const NewSongPage = () => {
+  const newSongs = useSelector((state) => state.newSong.newSongs);
+  const loading = useSelector((state) => state.newSong.loading);
 
   return (
     <>
@@ -13,4 +13,4 @@ const NhacMoiPage = () => {
   );
 };
 
-export default NhacMoiPage;
+export default NewSongPage;

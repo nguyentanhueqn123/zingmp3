@@ -26,9 +26,9 @@ import {
   setMute,
   setPlay,
 } from "../../redux/reducer/homeSlice";
-import { setIndexZingChart } from "../../redux/reducer/zingchartSlice";
+import { setIndexZingChart } from "../../redux/reducer/zingChartSlice";
 import Volume from "./Volume/Volume";
-import { setConfig, config } from "../../localStorage/localStorage";
+import { config } from "../../localStorage/localStorage";
 
 const Footer = () => {
   const dispatch = useDispatch();
@@ -40,9 +40,9 @@ const Footer = () => {
   const time = useSelector((state) => state.home.time);
   const percentage = useSelector((state) => state.home.percentage);
   const isPlay = useSelector((state) => state.home.isPlay);
-  const index = useSelector((state) => state.zingchart.index);
-  const indexNewSong = useSelector((state) => state.moiphathanh.index);
-  const topCharts = useSelector((state) => state.zingchart.topCharts);
+  const index = useSelector((state) => state.zingChart.index);
+  const indexNewSong = useSelector((state) => state.newSong.index);
+  const topCharts = useSelector((state) => state.zingChart.topCharts);
   const isRandom = useSelector((state) => state.song.isRandom);
   const isRepeat = useSelector((state) => state.song.isRepeat);
   const loading = useSelector((state) => state.song.loading);

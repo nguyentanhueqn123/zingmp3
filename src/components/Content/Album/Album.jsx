@@ -9,8 +9,8 @@ import { setToast } from "../../../redux/reducer/homeSlice";
 
 const Album = () => {
   const songInfo = useSelector((state) => state.home.songInfo);
-  const topCharts = useSelector((state) => state.zingchart.topCharts);
-  const loading = useSelector((state) => state.zingchart.loading);
+  const topCharts = useSelector((state) => state.zingChart.topCharts);
+  const loading = useSelector((state) => state.zingChart.loading);
   const dispatch = useDispatch();
 
   return (

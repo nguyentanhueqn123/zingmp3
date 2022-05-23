@@ -6,7 +6,7 @@ import { BsPlayFill } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { createSong } from "../../../redux/reducer/songSlice";
 import format from "format-duration";
-import { setIndexZingChart } from "../../../redux/reducer/zingchartSlice";
+import { setIndexZingChart } from "../../../redux/reducer/zingChartSlice";
 
 const TableItem = ({ item, index, icon }) => {
   const isPlay = useSelector((state) => state.home.isPlay);

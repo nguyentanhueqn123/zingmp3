@@ -2,7 +2,7 @@ import React from "react";
 import PlayLists from "../PlayList/Playlists";
 import Slide from "../Slide/Slide";
 
-const KhamPhaPage = () => {
+const ExplorePage = () => {
   return (
     <>
       <Slide rectangle />
@@ -11,4 +11,4 @@ const KhamPhaPage = () => {
   );
 };
 
-export default KhamPhaPage;
+export default ExplorePage;

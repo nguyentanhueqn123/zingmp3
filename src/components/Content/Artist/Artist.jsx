@@ -7,11 +7,11 @@ import Table from "../Table/Table";
 import style from "./Artist.module.scss";
 
 const Artist = () => {
-  const artist = useSelector((state) => state.theodoi.artist);
+  const artist = useSelector((state) => state.follow.artist);
   const sections = useSelector(
-    (state) => state.theodoi.artist.sections[0].items
+    (state) => state.follow.artist.sections[0].items
   );
-  const loading = useSelector((state) => state.theodoi.loading);
+  const loading = useSelector((state) => state.follow.loading);
   console.log(sections);
   console.log(loading);
   return (

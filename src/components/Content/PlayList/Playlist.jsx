@@ -12,9 +12,9 @@ const Playlist = ({ title, playlist }) => {
       <h3 className={style.header}>{title}</h3>
       <div className={clsx("row", style.list)}>
         {playlist.map((plist, i) => (
-          <div className="col l-2-4 m-3 c-4">
+          <div className="col l-2-4 m-3 c-4" key={i}>
             <div className={clsx(style.card)} key={i}>
-              <Link to="album" className={style.link}>
+              <Link to="/album" className={style.link}>
                 <div className={style.container}>
                   <img src={plist.thumbnail} alt="" className={style.img} />
 

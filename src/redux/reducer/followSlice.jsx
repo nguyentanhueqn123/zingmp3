@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-export const theoDoiSlice = createSlice({
+export const followReducer = createSlice({
   name: "theodoi",
   initialState: {
     artist: {
@@ -37,5 +37,5 @@ export const theoDoiSlice = createSlice({
     },
   },
 });
-export const { setArtist, setLoading } = theoDoiSlice.actions;
-export default theoDoiSlice.reducer;
+export const { setArtist, setLoading } = followReducer.actions;
+export default followReducer.reducer;

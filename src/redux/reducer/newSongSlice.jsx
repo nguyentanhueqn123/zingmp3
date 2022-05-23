@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setConfig, config } from "../../localStorage/localStorage";
 
-export const moiphathanhSlice = createSlice({
-  name: "moiphathanh",
+export const newSongReducer = createSlice({
+  name: "newSong",
   initialState: {
     index: config.indexNewSong || 0,
     newSongs: config.newSongs || [
@@ -30,5 +30,5 @@ export const moiphathanhSlice = createSlice({
     },
   },
 });
-export const { showNewSong, setIndexNewSong } = moiphathanhSlice.actions;
-export default moiphathanhSlice.reducer;
+export const { showNewSong, setIndexNewSong } = newSongReducer.actions;
+export default newSongReducer.reducer;

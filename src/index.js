@@ -5,14 +5,14 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import App from "./components/App/App.jsx";
 import Notfound from "./components/Notfound/Notfound";
-import KhamPhaPage from "./components/Content/Page/KhamPhaPage";
-import ZingchartPage from "./components/Content/Page/ZingchartPage";
+import ExplorePage from "./components/Content/Page/ExplorePage";
+import ZingChartPage from "./components/Content/Page/ZingChartPage";
 import RadioPage from "./components/Content/Page/RadioPage";
-import TheoDoiPage from "./components/Content/Page/TheoDoiPage";
-import NhacMoiPage from "./components/Content/Page/NhacMoiPage";
+import FollowPage from "./components/Content/Page/FollowPage";
+import NewSongPage from "./components/Content/Page/NewSongPage";
 import MvPage from "./components/Content/Page/MvPage";
 import MV from "./components/Content/MVList/MV";
-import CaNhanPage from "./components/Content/Page/CaNhanPage";
+import PersonalPage from "./components/Content/Page/PersonalPage";
 import Top100Page from "./components/Content/Page/Top100Page";
 import AlbumPage from "./components/Content/Page/AlbumPage";
 import Artist from "./components/Content/Artist/Artist";
@@ -25,18 +25,18 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route index element={<KhamPhaPage />} />
+            <Route index element={<ExplorePage />} />
 
-            <Route path="mymusic" element={<CaNhanPage />} />
-            <Route path="zing-chart" element={<ZingchartPage />} />
+            <Route path="mymusic" element={<PersonalPage />} />
+            <Route path="zing-chart" element={<ZingChartPage />} />
             <Route path="radio" element={<RadioPage />} />
 
-            <Route path="the-loai-nghe-si" element={<TheoDoiPage />}>
+            <Route path="the-loai-nghe-si" element={<FollowPage />}>
               <Route path="Viet-Nam" element={<Notfound />} />
               <Route path="Nuoc-Ngoai" element={<Notfound />} />
             </Route>
 
-            <Route path="moi-phat-hanh" element={<NhacMoiPage />} />
+            <Route path="moi-phat-hanh" element={<NewSongPage />} />
             <Route path="hub" element={<Notfound />} />
             <Route path="top100" element={<Top100Page />} />
 
